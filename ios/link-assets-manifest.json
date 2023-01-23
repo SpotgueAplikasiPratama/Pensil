@@ -1,0 +1,21 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/Montserrat-Bold.otf",
+      "sha1": "a88aa713b7cdada0016869ed3548aa9c4e4f18b5"
+    },
+    {
+      "path": "assets/fonts/Montserrat-Italic.otf",
+      "sha1": "43e14b2056deca9342912bf8d546aa3871ee1715"
+    },
+    {
+      "path": "assets/fonts/Montserrat-Regular.otf",
+      "sha1": "a3f5403e26df9e0dfcabd5c17bdf29662fbe96c2"
+    },
+    {
+      "path": "assets/fonts/Ubuntu.ttf",
+      "sha1": "bd34d577a86d9caaff673409fd5a196c27831220"
+    }
+  ]
+}

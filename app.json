@@ -1,0 +1,19 @@
+{
+  "name": "MAGVisitor",
+  "displayName": "MAG Visitor",
+  "keyEncrypt": "SpotgueCore",
+  // "visitorTableID": "2AA0F7CB-DB5A-4DE6-8CBD-84CB8A7F237E", //1.4.14 Live
+  // "visitorTableID": "5c2edeb6-ee26-4f0b-89c9-85452eb61fc3",//1.4.15
+  // "visitorTableID": "FEBF25A1-AFEF-4917-A037-FC4244F3AB36",//1.5.0
+  "visitorTableID": "d4366812-7b2f-4096-a768-0b2c0fd03ffc",//1.5.1
+  // "commonTableID": "e3582e6f-1d9e-4061-8701-3bbcc64c59ca",
+  "keyEncryptAnonymous": "SpotgueRangers",
+  "version":"1.5.1",
+  // "mode":"dev",
+//  "mode":"beta",
+   "mode":"live",
+  //"mode":"st",
+  "dbMode": "asyncStorage",
+  // "dbMode": "mmkv",
+  "tvMode":false
+}
