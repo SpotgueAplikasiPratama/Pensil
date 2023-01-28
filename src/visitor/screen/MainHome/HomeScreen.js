@@ -1195,30 +1195,6 @@ export class HomeScreen extends SGBaseScreen {
     } 
   }
 
-  async loadServerFile(filePath, strLabel) {
-    try {
-        var APIURL = 'https://apihostlive.azurewebsites.net/api/LoadPluginNew?code=RmpriOFKeqEZrnaWA0AYw1bGzNcYviT6fGtkCksG5L1FTU1pV08O7g==';
-        var _result = await RNFetchBlob.fetch('GET', APIURL, { filepath: filePath });
-        if (_result.data === '') { throw 'Empty file!' }
-        if (_result.respInfo.status !== 200) { throw _result.data }
-        return { data: _result.data, exception: null, isError: false }
-    } catch (e) {
-        console.log(e);
-        return { data: '', exception: e, isError: true }
-    }
-  }
-
-  async loadPluginList() {
-      var _res = await this.loadServerFile('/SGVisitorModule/pluginlist.json', 'HomeScreen.loadPluginList');
-      if (!_res.isError) {
-          var _list = JSON.parse(_res.data);
-          this.pluginList = _list.pluginList;
-          this.forceUpdate();
-          SGDialogBox.showToast('Plugin List Loaded');
-      } else {
-        SGDialogBox.showToast('Failed Load Plugin List');
-      }
-  }
 
   render() {
     var { w, h, p } = this.WHPNoHeader;

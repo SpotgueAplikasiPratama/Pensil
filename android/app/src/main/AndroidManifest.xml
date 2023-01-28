@@ -24,6 +24,9 @@
       android:roundIcon="@mipmap/ic_launcher_round"
       android:allowBackup="false"
       android:theme="@style/AppTheme">
+      <meta-data 
+        android:name="com.facebook.sdk.ApplicationId" 
+        android:value="@string/facebook_app_id"/>
       <meta-data
         android:name="com.google.android.geo.API_KEY"
         android:value="AIzaSyAt6lz62lzKIaFOa4G6o-kZqEVsDvGR8wc"/>
@@ -39,6 +42,50 @@
             <category android:name="android.intent.category.LAUNCHER" />
             <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
         </intent-filter>
+         <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="https"
+              android:host="app.spotgue.com"/>
+            <data android:host="www.linkedin.com" />
+            <data android:host="m.fb.watch" />
+            <data android:host="fb.com" />
+            <data android:host="facebook.com" />
+            <data android:host="m.facebook.com" />
+            <data android:host="www.fb.audio" />
+            <data android:host="www.fb.watch" />
+            <data android:host="fb.audio" />
+            <data android:host="fb.watch" />
+            <data android:host="fb.gg" />
+            <data android:host="fb.me" />
+            <data android:host="www.alpha.facebook.com" />
+            <data android:host="m.fbwat.ch" />
+            <data android:host="www.fb.gg" />
+            <data android:host="www.fb.me" />
+            <data android:host="www.facebook.com" />
+            <data android:host="www.beta.facebook.com" />
+            <data android:host="www.fbwat.ch" />
+            <data android:host="www.tripadvisor.com" />
+            <data android:host="instagram.com" />
+            <data android:host="youtube.com" />
+            <data android:host="m.youtube.com" />
+            <data android:host="www.youtube.com" />
+            <data android:host="youtu.be" />
+            <data android:host="twitter.com" />
+            <data android:host="www.twitter.com" />
+            <data android:host="api.whatsapp.com" />
+            <data android:host="wa.me" />
+            <data android:host="v.whatsapp.com" />
+            <data android:host="chat.whatsapp.com" />
+        </intent-filter>
+        <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="magvisitor"/>
+        </intent-filter>
       </activity>
+      <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
     </application>
 </manifest>

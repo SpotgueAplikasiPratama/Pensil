@@ -223,9 +223,12 @@ const Stack = createStackNavigator();
   //throw new Error("MAGV Sentry error!");
   
   SGHelperGlobalVar.addVar("UseRandomColor", false);
-  SGHelperGlobalVar.addVar("APIVisitor", 'https://spotgue-visitor-api-dev.azurewebsites.net/api/v1/visitor/');
-  SGHelperGlobalVar.addVar("APIVisitorAnonymous", 'https://spotgue-visitor-api-dev.azurewebsites.net/api/v1/visitor/anonymous/');
-  SGHelperGlobalVar.addVar("APICommon", 'https://spotgue-visitor-api-dev.azurewebsites.net/api/v1/common/');
+  // SGHelperGlobalVar.addVar("APIVisitor", 'https://spotgue-visitor-api-dev.azurewebsites.net/api/v1/visitor/');
+  SGHelperGlobalVar.addVar("APIVisitor", 'https://mag-visitor-api-dev.azurewebsites.net/api/v1/visitor/');
+  // SGHelperGlobalVar.addVar("APIVisitorAnonymous", 'https://spotgue-visitor-api-dev.azurewebsites.net/api/v1/visitor/anonymous/');
+  SGHelperGlobalVar.addVar("APIVisitorAnonymous", 'https://mag-visitor-api-dev.azurewebsites.net/api/v1/visitor/anonymous/');
+  // SGHelperGlobalVar.addVar("APICommon", 'https://spotgue-visitor-api-dev.azurewebsites.net/api/v1/common/');
+  SGHelperGlobalVar.addVar("APICommon", 'https://mag-visitor-api-dev.azurewebsites.net/api/v1/common/');
   // SGHelperGlobalVar.addVar("APIBuilding", 'https://spotgue-visitor-api-dev.azurewebsites.net/api/v1/building/');
   SGHelperGlobalVar.addVar('UriScheme1', 'spotguevisitor://');
   SGHelperGlobalVar.addVar('UriScheme2', 'https://app.spotgue.com/');
