@@ -16,6 +16,7 @@ GH : if there are multiple, can remove
      not sure what to fix, just try pod install again
      running this may also help
      cd ios && pod update
+
 3.  error saat run 
  ERROR  Invariant Violation: ViewPropTypes has been removed from React Native. Migrate to ViewPropTypes exported from 'deprecated-react-native-prop-types'., js engine: hermes
 
