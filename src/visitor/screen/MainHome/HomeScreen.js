@@ -234,7 +234,7 @@ export class HomeScreen extends SGBaseScreen {
 
     this.cardData = '';
     this.pluginList = [];
-
+    this._appStateListener = null;
   }
 
   _onChangeTab() {
@@ -346,7 +346,7 @@ export class HomeScreen extends SGBaseScreen {
       this.showChangeProfilePrompt();
     });
 
-    AppState.addEventListener('change', this._handleAppStateChange);
+    this._appStateListener = AppState.addEventListener('change', this._handleAppStateChange);
     //check apps still active or not
     this.interval = setInterval(async () => {
       if (this.state.appState === "active") {
@@ -1060,7 +1060,8 @@ export class HomeScreen extends SGBaseScreen {
   }
 
   componentWillUnmount() {
-    AppState.removeEventListener('change', this._handleAppStateChange);
+    // AppState.removeEventListener('change', this._handleAppStateChange);
+    if(this._appStateListener){this._appStateListener.remove();}
     clearInterval(this.interval);
     if (this._unsubscribe) { this._unsubscribe(); }
     BackHandler.removeEventListener('hardwareBackPress', this.onBackPress);

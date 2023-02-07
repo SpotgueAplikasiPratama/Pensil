@@ -58,7 +58,7 @@ export class InboxDetailScreen extends SGBaseScreen {
             await this.refreshItem();
         });
         this.alreadyMount = true;
-        AppState.addEventListener('change', this._handleAppStateChange);
+        this._appStateListener = AppState.addEventListener('change', this._handleAppStateChange);
         //check apps still active or not
         if (this.state.appState === "active") {
             this.interval = setInterval(async () => {
@@ -80,7 +80,8 @@ export class InboxDetailScreen extends SGBaseScreen {
     };
 
     componentWillUnmount() {
-        AppState.removeEventListener('change', this._handleAppStateChange);
+        // AppState.removeEventListener('change', this._handleAppStateChange);
+        if(this._appStateListener){this._appStateListener.remove();}
         clearInterval(this.interval);
         if (this._unsubscribe) { this._unsubscribe(); }
 
@@ -122,6 +123,7 @@ export class InboxDetailScreen extends SGBaseScreen {
         this.currentUser = SGHelperGlobalVar.getVar('GlobalCurrentUser');
         this.imageSetting = SGHelperGlobalVar.getVar('GlobalImageSetting');
         this.navigationList = { Place: 'MallHome', Store: 'StoreHome', Resto: 'RestoHome', PlaceEvent: 'PlaceEventDetail', StorePromo: 'StorePromoDetail', RestoPromo: 'RestoPromoDetail', StoreProduct: 'StoreProductDetail', RestoMenu: 'RestoMenuDetail', Facility: 'FacilityDetail', WhatToEat: 'WhatToEatResultDetail', WhatToGift: 'WhatToGiftResultDetail', ClothToBuy: 'ClothToBuyResultDetail', RewardPlace: 'RewardDetail', RewardStore: 'RewardDetail', RewardResto: 'RewardDetail', RewardReferralPlace: 'ReferralRewardDetail', RewardReferralStore: 'ReferralRewardDetail', RewardReferralResto: 'ReferralRewardDetail' }
+        this._appStateListener = null;
     }
 
     async _sendPress() {

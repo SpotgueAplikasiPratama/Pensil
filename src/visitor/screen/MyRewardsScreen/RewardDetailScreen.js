@@ -118,7 +118,7 @@ export class RewardDetailScreen extends SGBaseScreen {
             }).bind(this), null,  SGHelperGlobalVar.getVar("ResponTimes"));
         }
 
-        AppState.addEventListener('change', this._handleAppStateChange);
+        this._appStateListener = AppState.addEventListener('change', this._handleAppStateChange);
         //check apps still active or not
         if (this.state.appState === "active") {
             this.interval = setInterval(async () => {
@@ -233,7 +233,8 @@ export class RewardDetailScreen extends SGBaseScreen {
     };
 
     componentWillUnmount() {
-        AppState.removeEventListener('change', this._handleAppStateChange);
+        // AppState.removeEventListener('change', this._handleAppStateChange);
+        if(this._appStateListener){this._appStateListener.remove();}
         if(this.interval)clearInterval(this.interval);
         if (this._unsubscribe) { this._unsubscribe(); }
     }
@@ -263,6 +264,7 @@ export class RewardDetailScreen extends SGBaseScreen {
         this.showSuccess=false;
         this._trans=1  
         this._animMovement = new Animated.Value(0);
+        this._appStateListener = null;
     }
 
     _getCommentResourcePlaceReward(data) {

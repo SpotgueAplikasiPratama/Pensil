@@ -92,6 +92,7 @@ export class StoreWaitingListScreen extends SGBaseScreen {
          this.refresh=false
          this.pagingCounter = 0
          this.canWaitingList = false;
+         this._appStateListener = null;
     }
 
     async componentDidMount() {
@@ -100,7 +101,7 @@ export class StoreWaitingListScreen extends SGBaseScreen {
         this._unsubscribe = this.props.navigation.addListener('focus', async () => {
             await this._onSearchingItem();
 
-            AppState.addEventListener('change', this._handleAppStateChange);
+            this._appStateListener = AppState.addEventListener('change', this._handleAppStateChange);
             //check apps still active or not
 
             if (this.state.appState === "active") {
@@ -124,7 +125,8 @@ export class StoreWaitingListScreen extends SGBaseScreen {
     };
 
     _componentWillUnmount() {
-        AppState.removeEventListener('change', this._handleAppStateChange);
+        // AppState.removeEventListener('change', this._handleAppStateChange);
+        if(this._appStateListener){this._appStateListener.remove();}
         clearInterval(this.interval);
         if (this._unsubscribe) { this._unsubscribe(); }
     }

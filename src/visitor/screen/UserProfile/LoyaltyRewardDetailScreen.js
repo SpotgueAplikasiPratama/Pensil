@@ -182,7 +182,7 @@
      };
      
      componentWillUnmount() {
-         AppState.removeEventListener('change', this._handleAppStateChange);
+        //  AppState.removeEventListener('change', this._handleAppStateChange);
          clearInterval(this.interval);
          if (this._unsubscribe) { this._unsubscribe(); }
      }
