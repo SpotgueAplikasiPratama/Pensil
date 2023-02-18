@@ -628,7 +628,7 @@ import MyTranslator from "../../../plugin/lessons/locale/MyTranslator";
  
                  <View style={style.headerView}>
                      <BackButton color={'black'} hidden={!SGHelperNavigation.canGoBack(this.props.navigation)} imageSetting={this.imageSetting} navigator={this.props.navigation}></BackButton>
-                     <Image source={{ uri: image.spotgueLogoOnly[this.imageSetting].url }} style={style.logo}></Image>
+                     <Image source={{ uri: image.magLogoOnly[this.imageSetting].url }} style={style.logo}></Image>
                  </View>
                  <Text preset={Text.preset.titleH1B} style={style.titleText}>{SGLocalize.translate("SignInScreen.headerTitle")}</Text>
                  <Text preset={Text.preset.titleH3} style={style.bodyText}>{SGLocalize.translate("SignUpScreen.bodyText")}</Text>

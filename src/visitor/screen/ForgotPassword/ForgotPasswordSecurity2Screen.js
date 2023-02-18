@@ -131,7 +131,7 @@ export class ForgotPasswordSecurity2Screen extends SGBaseScreen {
             <SGRootScrollView accessible={true} accessibilityLabel={'ForgotPasswordSecurity2ScreenRootScrollView'} style={style.mainView1} contentContainerStyle={style.sv1_2}>
                 <View style={style.headerView}>
                     <BackButton color={'black'} hidden={!SGHelperNavigation.canGoBack(this.props.navigation)} imageSetting={this.imageSetting} navigator={this.props.navigation}></BackButton>
-                    <Image source={{ uri: image.spotgueLogoOnly[this.imageSetting].url }} style={style.logo}></Image>
+                    <Image source={{ uri: image.magLogoOnly[this.imageSetting].url }} style={style.logo}></Image>
                 </View>
                 <Text accessible={true} accessibilityLabel={'ForgotPasswordSecurity2ScreenTextQuestion'} preset={Text.preset.h7} style={style.text1}>{SGLocalize.translate("ForgotPasswordSecurity2Screen.text1")}</Text>
                 {SGHelperType.isDefined(this.securityQuestion) && this.securityQuestion!==''?

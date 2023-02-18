@@ -155,7 +155,7 @@ export class VerifyOTPForgotPasswordScreen extends SGBaseScreen {
             <SGRootScrollView accessible={true} accessibilityLabel={'VerifyOTPForgotPasswordScreenRootScrollView'} style={style.mainView1} contentContainerStyle={style.sv1_2}>
                 <View style={style.headerView}>
                     <BackButton color={'black'} hidden={!SGHelperNavigation.canGoBack(this.props.navigation)} imageSetting={this.imageSetting} navigator={this.props.navigation}></BackButton>
-                    <Image source={{ uri: image.spotgueLogoOnly[this.imageSetting].url }} style={style.logo}></Image>
+                    <Image source={{ uri: image.magLogoOnly[this.imageSetting].url }} style={style.logo}></Image>
                 </View>
                 <Text preset={Text.preset.titleH1B} style={style.text1}>{SGLocalize.translate("VerifyOTPSignUpScreen.headerTitle")}</Text>
                 <Text preset={Text.preset.titleH3} style={style.text2}>{SGLocalize.translate("VerifyOTPSignUpScreen.text1_1")} {this.selectedTab == 0 ? (this.userData.fEmail) : (this.userData.fPhoneNumber)}</Text>

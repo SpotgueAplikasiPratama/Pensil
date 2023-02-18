@@ -306,7 +306,7 @@ export class SignUpFormScreen extends SGBaseScreen {
                 
                 <View style={style.headerView}>
                     <BackButton color={'black'} hidden={!SGHelperNavigation.canGoBack(this.props.navigation)} imageSetting={this.imageSetting} navigator={this.props.navigation}></BackButton>
-                    <Image source={{ uri: image.spotgueLogoOnly[this.imageSetting].url }} style={style.logo}></Image>
+                    <Image source={{ uri: image.magLogoOnly[this.imageSetting].url }} style={style.logo}></Image>
                 </View>
                 <Text preset={Text.preset.titleH1B} style={style.titleText}>{SGLocalize.translate("SignUpFormScreen.headerTitle")}</Text>
               

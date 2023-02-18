@@ -181,7 +181,7 @@ export class ChooseLanguageScreen extends SGBaseScreen {
         return (
             <SGRootScrollView accessible={true} accessibilityLabel={'ChooseLanguageScreenScrollView'} style={style.mainContainer} contentContainerStyle={style.scrollViewMaincontainer}>
                 
-                <Image accessible={true} style={style.logo} source={{ uri: image['spotgueLogoOnly'][this.imageSetting].url }}></Image>
+                <Image accessible={true} style={style.logo} source={{ uri: image['magLogoOnly'][this.imageSetting].url }}></Image>
                 <Text accessible={true} accessibilityLabel={'ChooseLanguageScreenTitleOrnament'} preset={Text.preset.titleH1B} style={style.titleText}>{SGLocalize.translate("letsGetStartedScreen.title")}</Text>
                 <Text accessible={true} accessibilityLabel={'ChooseLanguageScreenSubText2'} preset={Text.preset.titleH3B} style={style.selectLanguageText}>{SGLocalize.translate("letsGetStartedScreen.subtitle")}</Text>
                 <View accessible={true} accessibilityLabel={'ChooseLanguageScreenContainerView'} style={style.containerView1}>

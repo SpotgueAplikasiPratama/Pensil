@@ -9,11 +9,6 @@ export default {
         med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/defaultUserImage_med.png', width: '', height: '' },
         high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/defaultUserImage_high.png', width: '', height: '' }
     },
-    spotgueLogoOnly: {
-        low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/spotgue_logo_only_low.png', width: '', height: '' },
-        med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/spotgue_logo_only_med.png', width: '', height: '' },
-        high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/spotgue_logo_only_high.png', width: '', height: '' }
-    },
     billButton: {
         low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Bill_low.png', width: '', height: '' },
         med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Bill_med.png', width: '', height: '' },
@@ -126,12 +121,6 @@ export default {
         med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/playstore_med.png', width: '', height: '' },
         high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/appstore_high.png', width: '', height: '' }
     },
-    //..
-    logoSpotgue: {
-        low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Spotgue_Logo_Red_low.png', width: '', height: '' },
-        med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Spotgue_Logo_Red_med.png', width: '', height: '' },
-        high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Spotgue_Logo_Red_high.png', width: '', height: '' }
-    },
     logoGoogleMaps: {
         low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/google_maps_logo_low.png', width: '', height: '' },
         med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/google_maps_logo_med.png', width: '', height: '' },
@@ -152,55 +141,11 @@ export default {
         med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/lastVisitedTagIcon_med.png', width: '', height: '' },
         high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/lastVisitedTagIcon_high.png', width: '', height: '' }
     },
-    // ini emot feedback smile comment
-    cf1: {
-        active: {
-            low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Active_Happy_low.png', width: '', height: '' },
-            med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Active_Happy_med.png', width: '', height: '' },
-            high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Active_Happy_high.png', width: '', height: '' }
-        },
-        inactive: {
-            low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Inactive_Happy_low.png', width: '', height: '' },
-            med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Inactive_Happy_med.png', width: '', height: '' },
-            high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Inactive_Happy_high.png', width: '', height: '' }
-        },
-    },
-    // ini emot feedback confused comment
-    cf2: {
-        active: {
-            low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Active_Confused_low.png', width: '', height: '' },
-            med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Active_Confused_med.png', width: '', height: '' },
-            high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Active_Confused_high.png', width: '', height: '' }
-        },
-        inactive: {
-            low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Inactive_Confused_low.png', width: '', height: '' },
-            med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Inactive_Confused_med.png', width: '', height: '' },
-            high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Inactive_Confused_high.png', width: '', height: '' }
-        },
-    },
-    // ini emot feedback sad comment
-    cf3: {
-        active: {
-            low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Active_Sad_low.png', width: '', height: '' },
-            med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Active_Sad_med.png', width: '', height: '' },
-            high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Active_Sad_high.png', width: '', height: '' }
-        },
-        inactive: {
-            low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Inactive_Sad_low.png', width: '', height: '' },
-            med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Inactive_Sad_med.png', width: '', height: '' },
-            high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Inactive_Sad_high.png', width: '', height: '' }
-        },
-    },
     closeButton: {
         low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Close_Icon_low.png', width: '', height: '' },
         med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Close_Icon_med.png', width: '', height: '' },
         high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Close_Icon_high.png', width: '', height: '' }
     },
-    // searchBar: {
-    //     low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/SearchBar.png', width: '', height: '' },
-    //     med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/SearchBar.png', width: '', height: '' },
-    //     high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/SearchBar.png', width: '', height: '' }
-    // },
     sadSmiley: {
         low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/SadSmiley_low.png', width: '', height: '' },
         med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/SadSmiley_med.png', width: '', height: '' },
@@ -316,32 +261,6 @@ export default {
         med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/profileIcon_med.png', width: '', height: '' },
         high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/profileIcon_high.png', width: '', height: '' }
     },
-    // homeIcon: {
-    //     low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/homeIcon_low.png', width: '', height: '' },
-    //     med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/homeIcon_med.png', width: '', height: '' },
-    //     high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/homeIcon_high.png', width: '', height: '' }
-    // },
-    // myParkingIcon: {
-    //     low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/myParkingIcon_low.png', width: '', height: '' },
-    //     med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/myParkingIcon_med.png', width: '', height: '' },
-    //     high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/myParkingIcon_high.png', width: '', height: '' }
-    // },
-    // myBookingIcon: {
-    //     low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/myBookingIcon_low.png', width: '', height: '' },
-    //     med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/myBookingIcon_med.png', width: '', height: '' },
-    //     high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/myBookingIcon_high.png', width: '', height: '' }
-    // },
-    // myRewardIcon: {
-    //     low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/myRewardIcon_low.png', width: '', height: '' },
-    //     med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/myRewardIcon_med.png', width: '', height: '' },
-    //     high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/myRewardIcon_high.png', width: '', height: '' }
-    // },
-    // askAliceIcon: {
-    //     low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/askAliceIcon_low.png', width: '', height: '' },
-    //     med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/askAliceIcon_med.png', width: '', height: '' },
-    //     high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/askAliceIcon_high.png', width: '', height: '' }
-    // },
-    //Image Country Phone Code
     '+62': {
         low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/indonesia_flag_low.png', width: '', height: '' },
         med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/indonesia_flag_med.png', width: '', height: '' },
@@ -398,11 +317,6 @@ export default {
         med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/LGSWhatToEatFemale_med.jpg', width: '', height: '' },
         high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/LGSWhatToEatFemale_high.jpg', width: '', height: '' }
     },
-    logoSpotgueHeader: {
-        low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Spotgue_Logo_Red_2_low.png', width: '', height: '' },
-        med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Spotgue_Logo_Red_2_med.png', width: '', height: '' },
-        high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Spotgue_Logo_Red_2_high.png', width: '', height: '' }
-    },
     facebookButton: {
         low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/FacebookButton_low.png', width: '', height: '' },
         med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/FacebookButton_med.png', width: '', height: '' },
@@ -438,16 +352,6 @@ export default {
         med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/arrowRightIconWhite_med.png', width: '', height: '' },
         high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/arrowRightIconWhite_high.png', width: '', height: '' }
     },
-    arrowUpIconBlack: {
-        low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/arrowUpIconBlack_low.png', width: '', height: '' },
-        med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/arrowUpIconBlack_med.png', width: '', height: '' },
-        high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/arrowUpIconBlack_high.png', width: '', height: '' }
-    },
-    hideTabButtonIconBlack: {
-        low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/hideTabButtonIconBlack_low.png', width: '', height: '' },
-        med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/hideTabButtonIconBlack_med.png', width: '', height: '' },
-        high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/hideTabButtonIconBlack_high.png', width: '', height: '' }
-    },
     downloadIconWhite: {
         low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/downloadIconWhite_low.png', width: '', height: '' },
         med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/downloadIconWhite_med.png', width: '', height: '' },
@@ -468,11 +372,7 @@ export default {
         med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/NotAvailable_med.png', width: '', height: '' },
         high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/NotAvailable_high.png', width: '', height: '' }
     },
-    parkingLogo:{
-        low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/ParkingLogo_low.png', width: '', height: '' },
-        med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/ParkingLogo_med.png', width: '', height: '' },
-        high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/ParkingLogo_high.png', width: '', height: '' }
-    },
+    
     peduliLindugiLogo:{
         low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/peduliLindungi_logo.png', width: '', height: '' },
         med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/peduliLindungi_logo.png', width: '', height: '' },
@@ -528,27 +428,24 @@ export default {
         med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/shareReferral.jpg', width: '', height: '' },
         high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/shareReferral.jpg', width: '', height: '' }
     },
-    successScanID:{
-        low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/success_scan_id.png', width: '', height: '' },
-        med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/success_scan_id.png', width: '', height: '' },
-        high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/success_scan_id.png', width: '', height: '' }
-    },
-    successScanEN:{
-        low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/success_scan_en.png', width: '', height: '' },
-        med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/success_scan_en.png', width: '', height: '' },
-        high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/success_scan_en.png', width: '', height: '' }
-    },
-    successScanCN:{
-        low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/success_scan_cn.png', width: '', height: '' },
-        med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/success_scan_cn.png', width: '', height: '' },
-        high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/success_scan_cn.png', width: '', height: '' }
-    },
+
     OutOfStockImage:{
         low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/sold-out.png', width: '', height: '' },
         med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/sold-out.png', width: '', height: '' },
         high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/sold-out.png', width: '', height: '' }
-    }
-    
+    },
+
+
+    magLogoOnly: {
+        low: { url: 'https://magalphaacdc.blob.core.windows.net/visitordefaultassets/MAG_Logo_Rounded.jpg', width: '', height: '' },
+        med: { url: 'https://magalphaacdc.blob.core.windows.net/visitordefaultassets/MAG_Logo_Rounded.jpg', width: '', height: '' },
+        high: { url: 'https://magalphaacdc.blob.core.windows.net/visitordefaultassets/MAG_Logo_Rounded.jpg', width: '', height: '' }
+    },
+    logoMagHeader: {
+        low: { url: 'https://magalphaacdc.blob.core.windows.net/visitordefaultassets/MAG_Logo_Rounded.jpg', width: '', height: '' },
+        med: { url: 'https://magalphaacdc.blob.core.windows.net/visitordefaultassets/MAG_Logo_Rounded.jpg', width: '', height: '' },
+        high: { url: 'https://magalphaacdc.blob.core.windows.net/visitordefaultassets/MAG_Logo_Rounded.jpg', width: '', height: '' }
+    },
     // grey: 'grey',
     // buttonColor: "green",
     // tablineColor: "#cf0e0e",
@@ -561,6 +458,8 @@ export default {
     // scaleX: (Dimensions.get('window').width * 0.002),
     // scaleY: (Dimensions.get('window').width * 0.002),
     // iconFABAddColor: '#cf0e0e',
+
+    
 };
 
 
