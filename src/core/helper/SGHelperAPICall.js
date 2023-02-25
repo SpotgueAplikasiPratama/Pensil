@@ -19,6 +19,10 @@ import { visitorTableID, keyEncryptAnonymous, mode } from '../../../app.json'
 import { SGHelperGlobalVar } from '.';
 import NetInfo from "@react-native-community/netinfo";
 export class SGHelperAPICall {
+     static useAPIMgmt = false;
+     static setUseAPIMgmt(v){
+          SGHelperAPICall.useAPIMgmt = v;
+     }
      static callAPI(method, url, header, body, callBack) {
           var a = new Date().getTime();
           RNFetchBlob.fetch(method, url, header, body)
@@ -148,7 +152,7 @@ export class SGHelperAPICall {
           }
           var res = null;
           if(mode==='live'){
-               if(SGHelperGlobalVar.getVar("APIMapStatus")==="Primary" ){
+               if(SGHelperGlobalVar.getVar("APIMapStatus")==="Primary" || !SGHelperAPICall.useAPIMgmt){
                     res = await this.callAPIAsync('POST', 'https://mag-api-map-' + mode + '.azurewebsites.net/api/v1/visitor/SearchAPIListFromVersion', {
                          'Content-Type': 'application/json'
                     }, JSON.stringify(param))
@@ -174,6 +178,7 @@ export class SGHelperAPICall {
       }
       
      static async pingAzure(){
+          if(!SGHelperAPICall.useAPIMgmt){ return; }
           var date = new Date().toJSON()
           var str = DeviceInfo.getUniqueId() + date
           var param = {

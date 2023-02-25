@@ -15,5 +15,6 @@
   //"mode":"st",
   "dbMode": "asyncStorage",
   // "dbMode": "mmkv",
-  "tvMode":false
+  "tvMode":false,
+  "useAPIMgmt":"false"
 }
