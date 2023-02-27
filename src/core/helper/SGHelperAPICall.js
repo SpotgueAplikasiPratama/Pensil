@@ -141,7 +141,6 @@ export class SGHelperAPICall {
 
    
      static async getVisitorAPIMap() {
-          console.log('widih');
           var date = new Date().toJSON()
           var str = DeviceInfo.getUniqueId() + date
           var param = {
