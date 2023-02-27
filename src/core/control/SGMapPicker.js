@@ -26,8 +26,8 @@ import { SGHelperStyle } from '../helper';
 export class SGMapPicker extends SGBaseControl {
     static defaultCoordinate = {
         //MAG Office
-        latitude: -6.174924644746781,
-        longitude: 106.78991060703993,
+        latitude: -6.145576,
+        longitude: 106.892242,
     }
     onShowMapHandler() {
         SGPopView.showPopView(this.pvID);
