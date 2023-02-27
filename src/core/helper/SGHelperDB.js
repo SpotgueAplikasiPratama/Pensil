@@ -1,6 +1,6 @@
 /**
-* Spotgue Core Helper for Realm DB modules and function
-* wrap Realm DB implementation and hide from Spotgue UI App
+* MAG Core Helper for Realm DB modules and function
+* wrap Realm DB implementation and hide from MAG UI App
 * @format 
 * @flow 
 * 1. Create Realm DB Modules

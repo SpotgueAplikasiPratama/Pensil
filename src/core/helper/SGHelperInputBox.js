@@ -1,6 +1,6 @@
 /**
-* Spotgue Core Helper for showing Input Dialog Box
-* wrap react native input box implementation and hide from Spotgue UI App
+* MAG Core Helper for showing Input Dialog Box
+* wrap react native input box implementation and hide from MAG UI App
 * utilize SGHelperPopUp as base element to display dialog box
 * @format 
 * @flow 

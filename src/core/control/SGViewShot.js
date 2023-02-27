@@ -155,8 +155,8 @@
              SGDialogBox.hideDialogBox(this._DBID);
              setTimeout(() => {
                  Share.share({
-                     subject: 'Spotgue Share!',
-                     title: 'Share Spotgue!',
+                     subject: 'MAG Share!',
+                     title: 'Share MAG!',
                      message: 'Check this image out, \n' + imageJSON.high.uri,
                  }, {
                      // Android only:

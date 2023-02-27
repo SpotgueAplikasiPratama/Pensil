@@ -123,7 +123,7 @@ export class HomeMallDetailAndroidTVScreen extends SGBaseScreen {
         this.state={refresh:true,buttonList:[]}
         this.flatlistRef= React.createRef();
         this._parkingHighlightData=[]
-        this.text="Temukan informasi Event Mal dan beragam  promo di Aplikasi Spotgue"
+        this.text="Temukan informasi Event Mal dan beragam  promo di Aplikasi MAG"
         this.currency = SGHelperGlobalVar.getVar('GlobalCurrency');
         // console.log('HOMEMALLDETAIl')
     }

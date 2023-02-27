@@ -34,7 +34,7 @@ export default class HomeScreen extends Core.Screen.SGBaseScreen {
       <SGRootScrollView style={style.v1} >
         <SGImage source={{ uri: 'https://www.spotgue.com/logo.png' }} style={{ backgroundColor: 'transparent', width: 150, height: 150 }} />
         <SGText>
-          Hi Team, Welcome to Spotgue Visitor Testing App!
+          Hi Team, Welcome to MAG Visitor Testing App!
         </SGText>
         <SGButton style={{ width: w * 0.75 }} label={this.showPlugins?'Hide Plugin List':'Show Plugin List'} preset={SGButton.preset.green} onPress={() => { this.showPlugins=!this.showPlugins;this.forceUpdate(); }} />          
         <SGView style={{marginLeft:4*p}} hidden={!this.showPlugins}>

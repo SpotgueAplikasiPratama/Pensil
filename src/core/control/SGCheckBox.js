@@ -1,6 +1,6 @@
 /**
-* Spotgue CheckBox control class 
-* wrap react native checkbox implementation and hide from Spotgue UI App
+* MAG CheckBox control class 
+* wrap react native checkbox implementation and hide from MAG UI App
 * inheritance from SGBaseControl
 * @format 
 * @flow 

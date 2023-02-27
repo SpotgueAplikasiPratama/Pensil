@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>NSCameraUsageDescription</key>
-	<string>Allow "Spotgue" to access your camera to scan the QR Code and take photos to set as profile picture and save in uploaded list</string>
+	<string>Allow "MAG" to access your camera to scan the QR Code and take photos to set as profile picture and save in uploaded list</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Allow "Spotgue" to access your photos to set as profile picture and save in uploaded list</string>
+	<string>Allow "MAG" to access your photos to set as profile picture and save in uploaded list</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Allow "Spotgue" to access your photos to set as profile picture and save in uploaded list</string>
+	<string>Allow "MAG" to access your photos to set as profile picture and save in uploaded list</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>Allow "Spotgue" to access your microphone for recording</string>
+	<string>Allow "MAG" to access your microphone for recording</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string/>
 	<key>NSUserTrackingUsageDescription</key>

@@ -16,6 +16,5 @@ export default {
     scaleX: (Dimensions.get('window').width * 0.002),
     scaleY: (Dimensions.get('window').width * 0.002),
     iconFABAddColor: '#cf0e0e',
-    calender: '../../core/asset/image/Icon-ionic-ios-calendar.png',
-    clock: 'https://www.spotgue.com/dev/Exports/Icons/PNG/Android/drawable-xxxhdpi/Icon-awesome-clock.png'
+    calender: '../../core/asset/image/Icon-ionic-ios-calendar.png'
 };

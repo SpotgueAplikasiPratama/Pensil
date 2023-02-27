@@ -1,6 +1,6 @@
 /**
-* Spotgue Core Helper for Calling Server API
-* wrap react native fetch implementation and hide from Spotgue UI App
+* MAG Core Helper for Calling Server API
+* wrap react native fetch implementation and hide from MAG UI App
 * @format 
 * @flow 
 * 1. Call API (synchronous and asynchronous), with callback event (successful and failed event)

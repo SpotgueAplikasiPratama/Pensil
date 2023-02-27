@@ -1,6 +1,6 @@
 /**
-* Spotgue Scroll View control class 
-* wrap react native view implementation and hide from Spotgue UI App
+* MAG Scroll View control class 
+* wrap react native view implementation and hide from MAG UI App
 * inheritance from SGBaseControl
 * @format 
 * @flow 

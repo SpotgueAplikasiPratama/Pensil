@@ -1,5 +1,5 @@
 /**
-* Spotgue Core Helper for Error and Handling
+* MAG Core Helper for Error and Handling
 * manage error respon and handling error
 * Message : 
 * SG-A = Busy || unstable connection

@@ -1,6 +1,6 @@
 /**
  * 
-* Spotgue Core Helper for helping with type check, conversion, and formatting
+* MAG Core Helper for helping with type check, conversion, and formatting
 */
 /**
  * Version 1.2.0

@@ -1,6 +1,6 @@
 /**
-* Spotgue Core Helper for Logger function
-* wrap React Native logger implementation and hide from Spotgue UI App
+* MAG Core Helper for Logger function
+* wrap React Native logger implementation and hide from MAG UI App
 * @format 
 * @flow 
 * 1. configure log output:

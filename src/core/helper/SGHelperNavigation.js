@@ -4,8 +4,8 @@
  * GH Version 14 july 2021
  * - Updated new Component
  *
-* Spotgue Core Helper for Screen Navigation
-* wrap react native navigation implementation and hide from Spotgue UI App
+* MAG Core Helper for Screen Navigation
+* wrap react native navigation implementation and hide from MAG UI App
 * handle android back button navigation event
 * handle iOS back gesture navigation event also
 * @format 

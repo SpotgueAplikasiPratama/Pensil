@@ -1,5 +1,5 @@
 /**
-* Spotgue Core Helper for Global Variable management
+* MAG Core Helper for Global Variable management
 * provide access to Global Variable (state) that is accessible accross module
 * implementation may persist the variable in: 
 * a. memory
