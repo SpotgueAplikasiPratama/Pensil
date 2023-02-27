@@ -214,12 +214,12 @@ const tSpec = {
 const Stack = createStackNavigator();
 
  function App() {
-  if(mode !== 'dev' ){
-    Sentry.init({
-      // dsn: "https://b8c1f097fada49a9bdeb52e7cbeb7262@o881384.ingest.sentry.io/5835768",
-      dsn: "https://39e65dd0de9e43bbb97666a70e9f8370@o881384.ingest.sentry.io/4504551326482432",
-    });
-  }
+  // if(mode !== 'dev' ){
+  //   Sentry.init({
+  //     // dsn: "https://b8c1f097fada49a9bdeb52e7cbeb7262@o881384.ingest.sentry.io/5835768",
+  //     dsn: "https://39e65dd0de9e43bbb97666a70e9f8370@o881384.ingest.sentry.io/4504551326482432",
+  //   });
+  // }
   //throw new Error("MAGV Sentry error!");
   
   SGHelperGlobalVar.addVar("UseRandomColor", false);
