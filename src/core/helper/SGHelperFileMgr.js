@@ -1,6 +1,6 @@
 /**
-* Spotgue Core Helper for Managing File stored in mobile devices
-* wrap react native file implementation and hide from Spotgue UI App
+* MAG Core Helper for Managing File stored in mobile devices
+* wrap react native file implementation and hide from MAG UI App
 * @format 
 * @flow 
 * 1. get file

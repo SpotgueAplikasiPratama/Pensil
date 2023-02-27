@@ -607,7 +607,7 @@ export class CardIconButtonShare extends SGBaseContainer {
                     var urlArr2 = urlPath.split('/');         
                 }
                 var targetKey = this.props.targetKey;
-                // var message = 'One Stop Solution For Your Mall 4.0 Experience!\n\nBe the first to get a complete access to all information and promotion from your favourite malls.\nDownload Spotgue App\nhttp://spotgue.app.link/AL76TKSvibb'
+                // var message = 'One Stop Solution For Your Mall 4.0 Experience!\n\nBe the first to get a complete access to all information and promotion from your favourite malls.\nDownload MAG App\nhttp://spotgue.app.link/AL76TKSvibb'
                 var message = this.props.shareMessage;
                 
 
@@ -697,7 +697,7 @@ export class CardIconButtonShare extends SGBaseContainer {
                         break;
                     case 'Facility':
                         url = url + 'facility/' + fContentKey  + '?t=' + urlArr2[0] + '&m=' + mode.slice(0,1) + '&s=' + storageID + '&i=' + urlArr2[1];                        
-                        // Hai friends, kamu tahu ada fasilitas %{FacilityName} di %{MallName}. \n\nCari tahu info lengkapnya dan beragam Event & Promo terbaru %{MallName} di aplikasi Spotgue sekarang. Ada hadiah kejutan dan referral reward yang seru banget."
+                        // Hai friends, kamu tahu ada fasilitas %{FacilityName} di %{MallName}. \n\nCari tahu info lengkapnya dan beragam Event & Promo terbaru %{MallName} di aplikasi MAG sekarang. Ada hadiah kejutan dan referral reward yang seru banget."
                         message =  SGLocalize.translate('ShareButtonMessage.FacilityMsg',this.props.shareParams) + '\n\n' + SGLocalize.translate('ShareButtonMessage.UserReferralShare',{referralCode:SGHelperGlobalVar.getVar("GlobalCurrentUserData").fReferralCode}) + '\n\n' + 'Link: ' + url;
                         break;
                     case 'PlaceEvent':
@@ -759,8 +759,8 @@ export class CardIconButtonShare extends SGBaseContainer {
             }
 
                 Share.share({
-                    subject: 'Spotgue Share!',
-                    title: 'Share Spotgue!',
+                    subject: 'MAG Share!',
+                    title: 'Share MAG!',
                     message: message,
                 }, {
                     // Android only:
@@ -1092,7 +1092,7 @@ export class CardIconButton extends SGBaseContainer {
                 var url = SGHelperGlobalVar.getVar('UriScheme2');
 
                 var targetKey = this.props.targetKey;
-                // var message = 'One Stop Solution For Your Mall 4.0 Experience!\n\nBe the first to get a complete access to all information and promotion from your favourite malls.\nDownload Spotgue App\nhttp://spotgue.app.link/AL76TKSvibb'
+                // var message = 'One Stop Solution For Your Mall 4.0 Experience!\n\nBe the first to get a complete access to all information and promotion from your favourite malls.\nDownload MAG App\nhttp://spotgue.app.link/AL76TKSvibb'
                 var message = this.props.shareMessage;
                 switch (fContentType) {
                     case 'Place':
@@ -1157,8 +1157,8 @@ export class CardIconButton extends SGBaseContainer {
                 }
 
                 Share.share({
-                    subject: 'Spotgue Share!',
-                    title: 'Share Spotgue!',
+                    subject: 'MAG Share!',
+                    title: 'Share MAG!',
                     message: message,
                 }, {
                     // Android only:

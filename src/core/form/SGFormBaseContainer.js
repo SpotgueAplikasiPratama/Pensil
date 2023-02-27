@@ -1,6 +1,6 @@
 /**
-* Spotgue Core Form Base Container class for all custom Form control in the project
-* wrap react native React.Component implementation and hide from Spotgue UI App
+* MAG Core Form Base Container class for all custom Form control in the project
+* wrap react native React.Component implementation and hide from MAG UI App
 * @format 
 * @flow 
 * 1. Toggle hide/show

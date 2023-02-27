@@ -6,7 +6,7 @@
  * 4. hidden true|false
  * 5. disabled true|false
  * 6. shadow true|false and shadowIntensity
- * 7. default coordinate to Spotgue office (CP)
+ * 7. default coordinate to MAG office (CP)
  * 8. darkMode true|false
  */
 
@@ -25,7 +25,7 @@ import { SGHelperStyle } from '../helper';
 
 export class SGMapPicker extends SGBaseControl {
     static defaultCoordinate = {
-        //Spotgue Office
+        //MAG Office
         latitude: -6.174924644746781,
         longitude: 106.78991060703993,
     }

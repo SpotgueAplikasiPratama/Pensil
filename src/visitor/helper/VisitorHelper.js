@@ -1,5 +1,5 @@
 /**
-* Spotgue Visitor Helper for helping with type check, conversion, and formatting
+* MAG Visitor Helper for helping with type check, conversion, and formatting
 */
 import { SGLocalize } from "../locales/SGLocalize";
 import { SGHelperType, SGHelperGlobalVar } from '../../core/helper';

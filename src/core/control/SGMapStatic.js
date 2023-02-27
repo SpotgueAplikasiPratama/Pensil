@@ -19,10 +19,11 @@ import { SGHelperType, SGHelperStyle } from '../helper';
 
 export class    SGMapStatic extends SGBaseControl {
     static defaultCoordinate = {
-        //lokasi Spotgue office
-        latitude: -6.174924644746781,
-        longitude: 106.78991060703993,
+        //lokasi MAG office
+        latitude: -6.145576,
+        longitude: 106.892242,
     }
+
     static mapKey = 'AIzaSyAt6lz62lzKIaFOa4G6o-kZqEVsDvGR8wc';
     static mapURI = 'https://maps.googleapis.com/maps/api/staticmap?center=';
     static resolution = {

@@ -103,7 +103,7 @@ export class ParkingDetailAndroidTVScreen extends SGBaseScreen {
         this.state={refresh:true,buttonList:[]}
         this.flatlistRef= React.createRef();
         this._parkingHighlightData=[]
-        this.text="Temukan info parkir tersedia dan tandai titik parkir Anda di Aplikasi Spotgue"
+        this.text="Temukan info parkir tersedia dan tandai titik parkir Anda di Aplikasi MAG"
        
     }
 

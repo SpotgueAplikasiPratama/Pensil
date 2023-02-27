@@ -39,7 +39,7 @@ export class DemoVerificationScreen extends React.Component {
                     alert('Perangkat Anda belum teregistrasi, silakan mendaftarkan perangkat Anda ke Admin spotgue dengan kode perangkat: \n' + DeviceUniqueID);
                 }
             }).catch((err) => {
-                alert('Terjadi kesalahan, silakan hubungi Admin Spotgue');
+                alert('Terjadi kesalahan, silakan hubungi Admin MAG');
             })
     }
 

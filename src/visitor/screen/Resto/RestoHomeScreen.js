@@ -922,7 +922,7 @@ export class RestoHomeScreen extends SGBaseScreen {
                                         </TouchableOpacity>
                                     </ScrollView>
                                     :(null)}
-                                    {/* Spotgue Order Menu */}
+                                    {/* MAG Order Menu */}
                                     { this.restoSettingsData ?
                                     this.restoSettingsData.fShownOrderMenu =='Y' && this.restoSettingsData.fOrderMenuType == 'spotgue'  &&
                                     <ScrollView dummyFooterBar dummyBottomBar accessible={true} accessibilityLabel={'RestoHomeScreenScrollOrderView'} style={{ backgroundColor: 'white', flex: 1, }} contentContainerStyle={{ justifyContent: 'flex-start', }} tabLabel={SGLocalize.translate("restoHomeScreen.tabOrderMenuTitle")} scrollEventThrottle={100} onScroll={this.baseOnScrollHandler.bind(this)} onMomentumScrollBegin={this.baseOnMomentumScrollBeginHandler.bind(this)} onScrollEndDrag={this.baseOnScrollEndDragHandler.bind(this)} onMomentumScrollEnd={this.baseOnMomentumScrollEndHandler.bind(this)} showsVerticalScrollIndicator={false}>

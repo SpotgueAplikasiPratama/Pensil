@@ -1,6 +1,6 @@
 /**
-* Spotgue Core Helper for Managing File Cache
-* wrap react native cache implementation and hide from Spotgue UI App
+* MAG Core Helper for Managing File Cache
+* wrap react native cache implementation and hide from MAG UI App
 * @format 
 * @flow 
 * 1. manage cache file scope : image/icon, video, sound
