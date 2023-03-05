@@ -152,6 +152,7 @@ android {
         buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
         /* BYGH react-native-camera */
         missingDimensionStrategy 'react-native-camera', 'general' 
+        vectorDrawables.useSupportLibrary = true
         /* BYGH */
         if (isNewArchitectureEnabled()) {
             // We configure the CMake build only if you decide to opt-in for the New Architecture.
