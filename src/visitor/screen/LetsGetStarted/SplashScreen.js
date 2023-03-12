@@ -504,7 +504,8 @@ export class SplashScreen extends SGBaseScreen {
     
     async _getData(){
         // await tbSystemParamsDAO.consoleAllData()
-        SGHelperOneSignal.setAppId("a71e1f13-7669-4b10-af6b-380b389c0cbf");
+        // SGHelperOneSignal.setAppId("a71e1f13-7669-4b10-af6b-380b389c0cbf");
+        SGHelperOneSignal.setAppId("0a5f039f-dc94-4822-aead-7bc673a53c35");
         // OneSignal.setLogLevel(6, 0);
         SGHelperOneSignal.getDeviceState().then((v) => {
             var device = v;
