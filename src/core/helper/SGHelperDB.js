@@ -1,6 +1,6 @@
 /**
-* Spotgue Core Helper for Realm DB modules and function
-* wrap Realm DB implementation and hide from Spotgue UI App
+* MAG Core Helper for Realm DB modules and function
+* wrap Realm DB implementation and hide from MAG UI App
 * @format 
 * @flow 
 * 1. Create Realm DB Modules
@@ -145,7 +145,7 @@ export class SGHelperDB {
     }
     static async _get(table,condition){
         try {
-            if(await DeviceInfo.isEmulator()){
+            if(await DeviceInfo.isEmulator() || dbMode!=='mmkv'){
                 
                 var value = await AsyncStorage.getItem(table)
      
@@ -177,7 +177,7 @@ export class SGHelperDB {
     // static async _getListOf
     static async _delete(table,condition){
         try {
-            if(await DeviceInfo.isEmulator()){
+            if(await DeviceInfo.isEmulator() || dbMode!=='mmkv'){
                 if(SGHelperType.isDefined(condition)){
                     var value = await AsyncStorage.getItem(table)
                     if(value !== null) {
@@ -228,7 +228,7 @@ export class SGHelperDB {
     }
     static async _insert(table, value){
         try {
-            if(await DeviceInfo.isEmulator()){   
+            if(await DeviceInfo.isEmulator() || dbMode!=='mmkv'){   
                 var isTableExist = await this._get(table)
                 if(Array.isArray(value)){
                     for(var i=0;i<value.length;i++){
@@ -262,7 +262,7 @@ export class SGHelperDB {
             if(Array.isArray(value)){
                 throw ("array is not allowed ")
             }else{
-                if(await DeviceInfo.isEmulator()){   
+                if(await DeviceInfo.isEmulator() || dbMode!=='mmkv'){   
                     var isTableExist = await this._get(table)
                     if(isTableExist.length===0){
                         await AsyncStorage.setItem(table, JSON.stringify(value))
@@ -324,7 +324,7 @@ export class SGHelperDB {
     }
     static async isKeyExist(key) {
         var keys = [];
-        if (await DeviceInfo.isEmulator()) {
+        if (await DeviceInfo.isEmulator() || dbMode!=='mmkv') {
             keys = await AsyncStorage.getAllKeys();
         } else {
             keys = MMKV.getAllKeys();
@@ -335,7 +335,7 @@ export class SGHelperDB {
         return false;
     }
     static async storeKeyValue(key, value) {
-        if (await DeviceInfo.isEmulator()) {
+        if (await DeviceInfo.isEmulator() || dbMode!=='mmkv') {
             await AsyncStorage.setItem(key, JSON.stringify(value));
         } else {
             MMKV.set(key, JSON.stringify(value));
@@ -343,7 +343,7 @@ export class SGHelperDB {
     }
     static async getKeyValue(key) {
         if (await SGHelperDB.isKeyExist(key)) {
-            if (await DeviceInfo.isEmulator()) {
+            if (await DeviceInfo.isEmulator() || dbMode!=='mmkv') {
                 return (JSON.parse(await AsyncStorage.getItem(key)));
             } else {
                 return (JSON.parse(MMKV.getString(key)));

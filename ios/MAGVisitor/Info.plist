@@ -2,6 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Allow "MAG" to access your camera to scan the QR Code and take photos to set as profile picture and save in uploaded list</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Allow "MAG" to access your photos to set as profile picture and save in uploaded list</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Allow "MAG" to access your photos to set as profile picture and save in uploaded list</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Allow "MAG" to access your microphone for recording</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string/>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>Device information used for analytics purposes and app functionality to improve personalized experience</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>

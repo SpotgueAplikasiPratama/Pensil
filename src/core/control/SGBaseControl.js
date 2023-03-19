@@ -1,6 +1,6 @@
 /**
-* Spotgue Core BaseControl class for all custom control in the project
-* wrap react native React.Component implementation and hide from Spotgue UI App
+* MAG Core BaseControl class for all custom control in the project
+* wrap react native React.Component implementation and hide from MAG UI App
 * @format 
 * @flow 
 * 1. get ScreenWHP and ScreenWHPNoHeader on constructor from GlobalVar

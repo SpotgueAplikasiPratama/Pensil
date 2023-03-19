@@ -1,6 +1,6 @@
 /**
-* Spotgue PanZoomView control class 
-* wrap react native view and drag drop implementation and hide from Spotgue UI App
+* MAG PanZoomView control class 
+* wrap react native view and drag drop implementation and hide from MAG UI App
 * inheritance from SGBaseControl
 * @format 
 * @flow 

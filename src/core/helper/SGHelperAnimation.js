@@ -3,8 +3,8 @@
 * single animation : timing, decay, spring
 * multiple animation : parallel, sequence, stagger
 * animated components : View, Text, Image, ScrollView, Code
-* Spotgue Core Helper for Animating object
-* wrap react native animation implementation and hide from Spotgue UI App
+* MAG Core Helper for Animating object
+* wrap react native animation implementation and hide from MAG UI App
 * @format 
 * @flow 
 * 1. Animate with parameter object, effect, change value, duration, event animation tick call back, event animation complete call back

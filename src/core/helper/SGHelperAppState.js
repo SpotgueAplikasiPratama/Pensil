@@ -1,6 +1,6 @@
 /**
-* Spotgue Core Helper for Application State Management
-* wrap react native app state implementation and hide from Spotgue UI App
+* MAG Core Helper for Application State Management
+* wrap react native app state implementation and hide from MAG UI App
 * @format 
 * @flow 
 * 1. handle application state for active, background, closed / terminated

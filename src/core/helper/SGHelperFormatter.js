@@ -1,6 +1,6 @@
 /**
-* Spotgue Core Helper for Formatting Variable and Type Conversion
-* wrap react native default implementation and hide from Spotgue UI App
+* MAG Core Helper for Formatting Variable and Type Conversion
+* wrap react native default implementation and hide from MAG UI App
 * @format 
 * @flow 
 * 1. Format string variable

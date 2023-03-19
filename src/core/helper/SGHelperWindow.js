@@ -1,6 +1,6 @@
 /**
-* Spotgue Core Helper for Window functionality
-* wrap react native implementation and hide from Spotgue UI App
+* MAG Core Helper for Window functionality
+* wrap react native implementation and hide from MAG UI App
 * @format 
 * @flow 
 * 1. get, set, lock screen orientation

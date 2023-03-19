@@ -1,6 +1,6 @@
 /**
-* Spotgue Core Helper for playing sound file
-* wrap react-native-sound implementation and hide from Spotgue UI App
+* MAG Core Helper for playing sound file
+* wrap react-native-sound implementation and hide from MAG UI App
 * @format 
 * @flow 
 * 1. Play Sound with loop

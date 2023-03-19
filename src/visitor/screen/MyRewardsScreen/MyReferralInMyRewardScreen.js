@@ -296,8 +296,8 @@ export class MyReferralInMyRewardScreen extends SGBaseScreen {
         var message =this._shareMessageRefferal()
         this.setState({ loading: true })
         Share.share({
-            subject: 'Spotgue Share!',
-            title: 'Share Spotgue!',
+            subject: 'MAG Share!',
+            title: 'Share MAG!',
             message: message,
         }, {
             // Android only:

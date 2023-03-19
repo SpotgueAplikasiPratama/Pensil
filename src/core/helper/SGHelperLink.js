@@ -1,6 +1,6 @@
 /**
-* Spotgue Core Helper for Linking object
-* wrap react native link implementation and hide from Spotgue UI App
+* MAG Core Helper for Linking object
+* wrap react native link implementation and hide from MAG UI App
 * @format 
 * @flow 
 * 1. Show link to webpage (open browser)
