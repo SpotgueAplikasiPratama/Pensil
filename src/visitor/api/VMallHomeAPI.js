@@ -29,11 +29,8 @@ export class VMallHomeAPI extends SGBaseScreen {
 
     static async SearchBuildingHighlightSaleHashtag(buildingKey,language, arrFilter, arrSort,pagingParam) {
         console.log('SearchBuildingHighlightSaleHashtag')
-        var language = { name: language.toUpperCase(), operator: 'SEARCH', value: '' };
-        var buildingFilter = { name: 'buildingKey', operator: '=', value: buildingKey };
-        arrFilter.push(language);
-        arrFilter.push(buildingFilter);
-        var arrSort = arrSort;
+        arrFilter.push({ name: language.toUpperCase(), operator: 'SEARCH', value: '' });
+        arrFilter.push({ name: 'buildingKey', operator: '=', value: buildingKey });
         var filtersort = SGHelperAPICall.convertFilterSort(arrFilter, arrSort);
         console.log(JSON.stringify({
             filter: filtersort.filter,
@@ -57,10 +54,7 @@ export class VMallHomeAPI extends SGBaseScreen {
     }
 
     static async SearchBuildingHighlightSeeMoreSaleDiscount(buildingKey, arrFilter, arrSort,pagingParam) {
-        var arrFilter = [
-            { name: 'buildingKey', operator: '=', value: buildingKey }
-        ]
-        var arrSort = arrSort;
+        arrFilter.push({ name: 'buildingKey', operator: '=', value: buildingKey });
         var filtersort = SGHelperAPICall.convertFilterSort(arrFilter, arrSort);
         var res = await SGHelperAPICall.callAPISync('SearchBuildingHighlightSeeMoreSaleDiscount', {
             filter: filtersort.filter,
@@ -71,11 +65,10 @@ export class VMallHomeAPI extends SGBaseScreen {
     }
 
     static async SearchBuildingHighlightSeeMoreSaleHashtag(buildingKey,language,keyword, arrFilter, arrSort,pagingParam) {
-        var arrFilter = [
+        arrFilter = [
             { name: language.toUpperCase(), operator: 'SEARCH', value: keyword },
             { name: 'buildingKey', operator: '=', value: buildingKey }
         ]
-        var arrSort = arrSort;
         var filtersort = SGHelperAPICall.convertFilterSort(arrFilter, arrSort);
         var res = await SGHelperAPICall.callAPISync('SearchBuildingHighlightSeeMoreSaleHashtag', {
             filter: filtersort.filter,
@@ -94,11 +87,10 @@ export class VMallHomeAPI extends SGBaseScreen {
 
 
     static async SearchBuildingHighlightSeeMoreSaleDiscountWithKeyword(buildingKey,language,keyword, arrFilter, arrSort,pagingParam) {
-        var arrFilter = [
+        arrFilter = [
             { name: language.toUpperCase(), operator: 'SEARCH', value: keyword },
             { name: 'buildingKey', operator: '=', value: buildingKey }
         ]
-        var arrSort = arrSort;
         var filtersort = SGHelperAPICall.convertFilterSort(arrFilter, arrSort);
         var res = await SGHelperAPICall.callAPISync('SearchBuildingHighlightSeeMoreSaleDiscountWithKeyword', {
             filter: filtersort.filter,
