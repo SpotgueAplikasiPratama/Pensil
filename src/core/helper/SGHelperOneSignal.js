@@ -13,6 +13,10 @@ export class SGHelperOneSignal {
     static async getDeviceState(){
         return OneSignal.getDeviceState();
     }
+    static promptForPushNotificationsWithUserResponse()
+    {
+        return OneSignal.promptForPushNotificationsWithUserResponse();
+    }
 
     static setNotificationWillShowInForegroundHandler(handler){
         OneSignal.setNotificationWillShowInForegroundHandler(handler);
