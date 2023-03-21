@@ -141,6 +141,45 @@ export default {
         med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/lastVisitedTagIcon_med.png', width: '', height: '' },
         high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/lastVisitedTagIcon_high.png', width: '', height: '' }
     },
+    // ini emot feedback smile comment
+    cf1: {
+        active: {
+            low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Active_Happy_low.png', width: '', height: '' },
+            med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Active_Happy_med.png', width: '', height: '' },
+            high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Active_Happy_high.png', width: '', height: '' }
+        },
+        inactive: {
+            low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Inactive_Happy_low.png', width: '', height: '' },
+            med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Inactive_Happy_med.png', width: '', height: '' },
+            high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Inactive_Happy_high.png', width: '', height: '' }
+        },
+    },
+    // ini emot feedback confused comment
+    cf2: {
+        active: {
+            low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Active_Confused_low.png', width: '', height: '' },
+            med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Active_Confused_med.png', width: '', height: '' },
+            high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Active_Confused_high.png', width: '', height: '' }
+        },
+        inactive: {
+            low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Inactive_Confused_low.png', width: '', height: '' },
+            med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Inactive_Confused_med.png', width: '', height: '' },
+            high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Inactive_Confused_high.png', width: '', height: '' }
+        },
+    },
+    // ini emot feedback sad comment
+    cf3: {
+        active: {
+            low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Active_Sad_low.png', width: '', height: '' },
+            med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Active_Sad_med.png', width: '', height: '' },
+            high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Active_Sad_high.png', width: '', height: '' }
+        },
+        inactive: {
+            low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Inactive_Sad_low.png', width: '', height: '' },
+            med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Inactive_Sad_med.png', width: '', height: '' },
+            high: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Inactive_Sad_high.png', width: '', height: '' }
+        },
+    },
     closeButton: {
         low: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Close_Icon_low.png', width: '', height: '' },
         med: { url: 'https://spotguestoragelive01.blob.core.windows.net/visitordefaultassets/Close_Icon_med.png', width: '', height: '' },
