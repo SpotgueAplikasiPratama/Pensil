@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* MAGVisitorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MAGVisitorTests.m */; };
 		0C80B921A6F3F58F76C31292 /* libPods-MAGVisitor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-MAGVisitor.a */; };
-		0D68422FD027B16FAB9F2C85 /* libPods-OneSignalNotificationServiceExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 412A8552029D4760EBBE7E38 /* libPods-OneSignalNotificationServiceExtension.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -21,6 +20,7 @@
 		AAE2ED86AA534A7C9FADD706 /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E6C3FB79E004D62881CFAE3 /* Montserrat-Regular.otf */; };
 		B01A030029C6D96A00A709A2 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01A02FF29C6D96A00A709A2 /* NotificationService.swift */; };
 		B01A030429C6D96A00A709A2 /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B01A02FD29C6D96A00A709A2 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DC5DFBFE2380CACCDAE6DE28 /* libPods-OneSignalNotificationServiceExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C0B0845B8E48E9F898C2DC /* libPods-OneSignalNotificationServiceExtension.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,18 +58,18 @@
 		00E356EE1AD99517003FC87E /* MAGVisitorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MAGVisitorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* MAGVisitorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAGVisitorTests.m; sourceTree = "<group>"; };
+		0E13E0649DFF1B8EC20434B1 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* MAGVisitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MAGVisitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = MAGVisitor/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = MAGVisitor/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MAGVisitor/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MAGVisitor/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MAGVisitor/main.m; sourceTree = "<group>"; };
+		163D4B571BC13BB75517EFB1 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-MAGVisitor-MAGVisitorTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MAGVisitor-MAGVisitorTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4392A12AC88292D35C810B /* Pods-MAGVisitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAGVisitor.debug.xcconfig"; path = "Target Support Files/Pods-MAGVisitor/Pods-MAGVisitor.debug.xcconfig"; sourceTree = "<group>"; };
-		412A8552029D4760EBBE7E38 /* libPods-OneSignalNotificationServiceExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OneSignalNotificationServiceExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		47711A605AB23F4360286E1D /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
+		49C0B0845B8E48E9F898C2DC /* libPods-OneSignalNotificationServiceExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OneSignalNotificationServiceExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E6C3FB79E004D62881CFAE3 /* Montserrat-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Regular.otf"; path = "../assets/fonts/Montserrat-Regular.otf"; sourceTree = "<group>"; };
-		569DF67A3B2EBF149E05B822 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-MAGVisitor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAGVisitor.release.xcconfig"; path = "Target Support Files/Pods-MAGVisitor/Pods-MAGVisitor.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-MAGVisitor-MAGVisitorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAGVisitor-MAGVisitorTests.debug.xcconfig"; path = "Target Support Files/Pods-MAGVisitor-MAGVisitorTests/Pods-MAGVisitor-MAGVisitorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-MAGVisitor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MAGVisitor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,7 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D68422FD027B16FAB9F2C85 /* libPods-OneSignalNotificationServiceExtension.a in Frameworks */,
+				DC5DFBFE2380CACCDAE6DE28 /* libPods-OneSignalNotificationServiceExtension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,7 +167,7 @@
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				5DCACB8F33CDC322A6C60F78 /* libPods-MAGVisitor.a */,
 				19F6CBCC0A4E27FBF8BF4A61 /* libPods-MAGVisitor-MAGVisitorTests.a */,
-				412A8552029D4760EBBE7E38 /* libPods-OneSignalNotificationServiceExtension.a */,
+				49C0B0845B8E48E9F898C2DC /* libPods-OneSignalNotificationServiceExtension.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -235,8 +235,8 @@
 				5709B34CF0A7D63546082F79 /* Pods-MAGVisitor.release.xcconfig */,
 				5B7EB9410499542E8C5724F5 /* Pods-MAGVisitor-MAGVisitorTests.debug.xcconfig */,
 				89C6BE57DB24E9ADA2F236DE /* Pods-MAGVisitor-MAGVisitorTests.release.xcconfig */,
-				569DF67A3B2EBF149E05B822 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
-				47711A605AB23F4360286E1D /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
+				163D4B571BC13BB75517EFB1 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
+				0E13E0649DFF1B8EC20434B1 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -318,7 +318,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B01A030529C6D96A00A709A2 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
 			buildPhases = (
-				EAFE12E1717BFFFA65A80F07 /* [CP] Check Pods Manifest.lock */,
+				F5E6FFA29A0464473FCF93F3 /* [CP] Check Pods Manifest.lock */,
 				B01A02F929C6D96A00A709A2 /* Sources */,
 				B01A02FA29C6D96A00A709A2 /* Frameworks */,
 				B01A02FB29C6D96A00A709A2 /* Resources */,
@@ -529,7 +529,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MAGVisitor/Pods-MAGVisitor-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EAFE12E1717BFFFA65A80F07 /* [CP] Check Pods Manifest.lock */ = {
+		F5E6FFA29A0464473FCF93F3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -877,7 +877,7 @@
 		};
 		B01A030629C6D96A00A709A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 569DF67A3B2EBF149E05B822 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
+			baseConfigurationReference = 163D4B571BC13BB75517EFB1 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -917,7 +917,7 @@
 		};
 		B01A030729C6D96A00A709A2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 47711A605AB23F4360286E1D /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
+			baseConfigurationReference = 0E13E0649DFF1B8EC20434B1 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
