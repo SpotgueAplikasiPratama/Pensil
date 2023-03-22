@@ -604,7 +604,7 @@ export class SplashScreen extends SGBaseScreen {
                         <View style={{width:w,flex:1,justifyContent:'center'}}>
                             {/* <Image accessible accessibilityLabel={'SplashScreenLogoImage'} style={style.image1} source={this._logo[this._i]} onLoad={(()=>{SGHelperSoundPlayer.playSFX(require('../../asset/spotgue_sound.m4a'),0,()=>{this._soundFinished=true;})}).bind(this)} >
                             </Image> */}
-                            <Image accessible accessibilityLabel={'SplashScreenLogoImage'} style={style.image1} source={{uri: image.magLogoOnly.high.url}}>
+                            <Image accessible accessibilityLabel={'SplashScreenLogoImage'} style={style.image1} source={{uri: image.magLogoSquare.high.url}}>
                             </Image>
                             <Text accessible={true} accessibilityLabel={'SplashScreenTagLineText'} preset={Text.preset.titleH3} style={style.text1} >{SGLocalize.translate("splashScreen.tagLine")}</Text>
                             <View style={style.container}>

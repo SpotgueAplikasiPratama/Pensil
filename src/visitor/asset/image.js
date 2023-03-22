@@ -480,6 +480,16 @@ export default {
         med: { url: 'https://magalphaacdc.blob.core.windows.net/visitordefaultassets/MAG_Logo_Rounded.jpg', width: '', height: '' },
         high: { url: 'https://magalphaacdc.blob.core.windows.net/visitordefaultassets/MAG_Logo_Rounded.jpg', width: '', height: '' }
     },
+    magLogoSquare: {
+        low: { url: 'https://magalphaacdc.blob.core.windows.net/visitordefaultassets/MAG_Visitor.jpg', width: '', height: '' },
+        med: { url: 'https://magalphaacdc.blob.core.windows.net/visitordefaultassets/MAG_Visitor.jpg', width: '', height: '' },
+        high: { url: 'https://magalphaacdc.blob.core.windows.net/visitordefaultassets/MAG_Visitor.jpg', width: '', height: '' }
+    },
+    magLogoLandscape: {
+        low: { url: 'https://magalphaacdc.blob.core.windows.net/visitordefaultassets/MAG_Visitor_Landscape.png', width: '', height: '' },
+        med: { url: 'https://magalphaacdc.blob.core.windows.net/visitordefaultassets/MAG_Visitor_Landscape.png', width: '', height: '' },
+        high: { url: 'https://magalphaacdc.blob.core.windows.net/visitordefaultassets/MAG_Visitor_Landscape.png', width: '', height: '' }
+    },
     logoMagHeader: {
         low: { url: 'https://magalphaacdc.blob.core.windows.net/visitordefaultassets/MAG_Logo_Rounded.jpg', width: '', height: '' },
         med: { url: 'https://magalphaacdc.blob.core.windows.net/visitordefaultassets/MAG_Logo_Rounded.jpg', width: '', height: '' },

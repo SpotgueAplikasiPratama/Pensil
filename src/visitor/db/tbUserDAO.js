@@ -61,7 +61,7 @@ export class tbUserDataModelPassword extends SGBaseModel {
 
 export class tbUserData extends SGBaseModel {
     static getBlankJSON() {
-        return { fID: '', fImageProfileJSON: [], fEmail: '', fPhoneNumber: '', fPassword: '', fConfirmPassword: '', fSecurityQuestionKey: '', fQuestionAnswer: '', fName: '', fGender: '', fDOB: new Date(0), fLocation: '', fFamily: '', fFoodPreference: [], fLanguage: 'id', fCurrency: 'IDR', fCar: [], fImageSetting: 'med', fTrackingActive: 'Y', fNotificationActive: 'Y', fShortDescription: '', fReminderReservation: 'RR12', fTimeZoneSetting: new Date(0), fCountry: '', fProvince: '', fCity: '', fUrlInstagram: '', fUrlFacebook: '', fUrlTwitter: '', fFacebookID: '', fGoogleID: '', fAppleID: '', fRegisterMethod: 'spotgue', fActive: 'Y', fSpendCriteria: 'B', fCreatedBy: '', fCreatedDate: new Date(0), fLastModifiedBy: '', fLastModifiedDate: new Date(0), 
+        return { fID: '', fImageProfileJSON: [], fEmail: '', fPhoneNumber: '', fPassword: '', fConfirmPassword: '', fSecurityQuestionKey: '', fQuestionAnswer: '', fName: '', fGender: '', fDOB: new Date(), fLocation: '', fFamily: '', fFoodPreference: [], fLanguage: 'id', fCurrency: 'IDR', fCar: [], fImageSetting: 'med', fTrackingActive: 'Y', fNotificationActive: 'Y', fShortDescription: '', fReminderReservation: 'RR12', fTimeZoneSetting: new Date(0), fCountry: '', fProvince: '', fCity: '', fUrlInstagram: '', fUrlFacebook: '', fUrlTwitter: '', fFacebookID: '', fGoogleID: '', fAppleID: '', fRegisterMethod: 'spotgue', fActive: 'Y', fSpendCriteria: 'B', fCreatedBy: '', fCreatedDate: new Date(0), fLastModifiedBy: '', fLastModifiedDate: new Date(0), 
         fDeviceModel: '', fDeviceBrand: '', fDeviceOS: '', fDeviceOSVersion: '', fDeviceHeight: 0, fDeviceWidth: 0, fLoginLocation: '',fIsSimulator:false
     };
     }
@@ -70,6 +70,10 @@ export class tbUserData extends SGBaseModel {
         this.addValidator('fName', new SGHelperStringValidator(SGHelperType.stringType.string, true, 1,  SGLocalize.translate('UserDBModel.fName')));
         // this.addValidator('fSecurityQuestionKey', new SGHelperStringValidator(SGHelperType.stringType.string, true, 0, SGLocalize.translate('UserDBModel.SecurityQuestion')));
         // this.addValidator('fQuestionAnswer', new SGHelperStringValidator(SGHelperType.stringType.string, true, 1, SGLocalize.translate('UserDBModel.SecurityAnswer')));
+        this.addValidator('fGender', new SGHelperStringValidator(SGHelperType.stringType.string, true, 1,  SGLocalize.translate('UserDBModel.fGender')));
+        this.addValidator('fFamily', new SGHelperStringValidator(SGHelperType.stringType.string, true, 1,  SGLocalize.translate('UserDBModel.fFamily')));
+        this.addValidator('fFoodPreference', new SGHelperArrayValidator(true, 1,SGLocalize.translate('UserDBModel.fFoodPreference')));
+        this.addValidator('fSpendCriteria', new SGHelperStringValidator(SGHelperType.stringType.string, true, 1,  SGLocalize.translate('UserDBModel.fSpendCriteria')));
         this.addValidator('fPassword', new SGHelperStringValidator(SGHelperType.stringType.password, true, 8, SGLocalize.translate('UserDBModel.fPassword')));
         this.addValidator('fConfirmPassword', new SGHelperStringValidator(SGHelperType.stringType.password, true, 8, SGLocalize.translate('UserDBModel.fPassword')));
         this.addValidator('fConfirmPassword', new SGHelperFieldValidator(SGHelperType.stringType.password, SGHelperFieldValidator.operator.equal, this, 'fPassword', SGHelperFieldValidator.nullRule.bothNullReturnTrue, SGLocalize.translate('UserDBModel.fConfirmPassword')));

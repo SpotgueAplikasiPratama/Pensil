@@ -262,7 +262,7 @@ export class AskAliceScreen extends SGBaseScreen {
 
     getRecommendQuestionData() {
         return ([
-            { label: SGLocalize.translate('askAliceQuestion.0'), value: 0 },
+            // { label: SGLocalize.translate('askAliceQuestion.0'), value: 0 },
             { label: SGLocalize.translate('askAliceQuestion.1'), value: 1 },
             { label: SGLocalize.translate('askAliceQuestion.2'), value: 2 },
             { label: SGLocalize.translate('askAliceQuestion.3'), value: 3 },
@@ -294,9 +294,19 @@ export class AskAliceScreen extends SGBaseScreen {
     
     async _onRefreshAllItem() {
         var aliceLocation = await askAliceLastLocationSelectedDAO.getAliceLocation();
+        // console.log('alicelocation')
+        // console.log(aliceLocation)
+        // this.selectedPlace = SGHelperGlobalVar.getVar('GlobalLastSelectedPlace');
+        // console.log(this.selectedPlace);
         if(aliceLocation.length !==0){
         this.selectedPlace = SGHelperGlobalVar.getVar('GlobalLastSelectedPlace');
         // SGHelperGlobalVar.setVar('GlobalLastSelectedPlace', aliceLocation[0].selectedPlace);
+        // console.log('alicelocation')
+        // console.log(aliceLocation)
+        }else{
+            SGHelperGlobalVar.addVar('GlobalLastSelectedPlace', { key: '853d2044-ca20-491a-a8b5-5e88b679a36f', placeNameID: 'Mall Artha Gading', placeNameEN: 'Mall Artha Gading', placeNameCN: 'Mall Artha Gading' });
+            this.selectedPlace = SGHelperGlobalVar.getVar('GlobalLastSelectedPlace');
+            
         }
         // this.forceUpdate();
     }
@@ -329,7 +339,7 @@ export class AskAliceScreen extends SGBaseScreen {
                 this._voices = await Tts.voices();
                 if(this.voiceIsAvailable === false){
                 for(var i = 0; i < this._voices.length; i++){
-                    console.log(this._ttsLanguage[this.Language].key);
+                    // console.log(this._ttsLanguage[this.Language].key);
                     if((this._ttsLanguage[this.Language].key).includes(this._voices[i].language)){
                         this.voiceIsAvailable = true;
                         this.selectedVoices = this._voices[i].language;
@@ -567,7 +577,7 @@ export class AskAliceScreen extends SGBaseScreen {
             this.userAliceVoiceSetting = await tbSystemParamsDAO.getUserAliceVoiceSetting();
             if(this.firstTimeOpen === false){
                 this.newUserAliceVoiceSetting = SGHelperType.copyJSON(this.userAliceVoiceSetting);
-                console.log(this.newUserAliceVoiceSetting)
+                // console.log(this.newUserAliceVoiceSetting)
                 if (this.userAliceVoiceSetting.fValue === 'Y') {
                         Tts.stop();
                         this.newUserAliceVoiceSetting.fValue = 'N'
@@ -746,8 +756,8 @@ export class AskAliceScreen extends SGBaseScreen {
                 { min: (VisitorHelper._showPriceText(priceRangeList[this.currentUserCurrency][this.data[i].fAnswerQ3].min)), 
                 max: (VisitorHelper._showPriceText(priceRangeList[this.currentUserCurrency][this.data[i].fAnswerQ3].max)), currency: this.currentUserCurrency }), 
                 value: this.data[i].fAnswerQ3, currency: this.currentUserCurrency, min: priceRangeList[this.currentUserCurrency][this.data[i].fAnswerQ3].min, max: priceRangeList[this.currentUserCurrency][this.data[i].fAnswerQ3].max, currency: this.currentUserCurrency };
-                console.log('alice accept JSON')
-                console.log(acceptJSON);
+                // console.log('alice accept JSON')
+                // console.log(acceptJSON);
                 if (!distinct.includes(acceptJSON.value)) {
                     distinct.push(acceptJSON.value);
                     res.push(acceptJSON);

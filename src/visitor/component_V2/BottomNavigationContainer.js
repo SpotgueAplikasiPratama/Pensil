@@ -55,6 +55,7 @@ export class BottomNavigationContainer extends SGBaseContainer {
                 var circuitBreaker = SGHelperType.getCircuitBreakerStatus('CircuitBreakerAlice')
                 var language=SGHelperGlobalVar.getVar('GlobalLanguage').toUpperCase()
                 if(circuitBreaker.fActive==="Y"){
+                    console.log('ask alice screen !!!!!')
                     SGHelperNavigation.navigatePush(this.props.navigator, 'AskAlice', { selectedPlace: this.props.selectedPlace });
                 }else{
                     SGDialogBox.showWarning(null,circuitBreaker["Title"+language],circuitBreaker[language],circuitBreaker["Button"+language],()=>{},true)
@@ -74,6 +75,7 @@ export class BottomNavigationContainer extends SGBaseContainer {
                 var language=SGHelperGlobalVar.getVar('GlobalLanguage').toUpperCase()
                 if(circuitBreaker.fActive==="Y"){
                     this._onIconParkirClick();
+                    console.log('Parkir Screen !!!!!')
                     SGHelperNavigation.navigatePush(this.props.navigator, 'MyParkingSpotWithLayout');
                 }else{
                     SGDialogBox.showWarning(null,circuitBreaker["Title"+language],circuitBreaker[language],circuitBreaker["Button"+language],()=>{},true)
@@ -85,6 +87,7 @@ export class BottomNavigationContainer extends SGBaseContainer {
     }
 
     setActive3() {
+        console.log('home')
         if(this.props.screen !== 'Home') SGHelperNavigation.navigateReset(this.props.navigator, 'Home',{})
         
     }
@@ -104,6 +107,7 @@ export class BottomNavigationContainer extends SGBaseContainer {
                 var language=SGHelperGlobalVar.getVar('GlobalLanguage').toUpperCase()
                 if(circuitBreaker.fActive==="Y"){
                     this._onMyBookingClick();
+                    console.log('my resto booking')
                     SGHelperNavigation.navigatePush(this.props.navigator, 'MyRestoBooking');
                 }else{
                     SGDialogBox.showWarning(null,circuitBreaker["Title"+language],circuitBreaker[language],circuitBreaker["Button"+language],()=>{},true)
@@ -123,6 +127,7 @@ export class BottomNavigationContainer extends SGBaseContainer {
                 var language=SGHelperGlobalVar.getVar('GlobalLanguage').toUpperCase()
                 if(circuitBreaker.fActive==="Y"){
                     this._onIconMyRewardClick();
+                    console.log('my reward')
                     SGHelperNavigation.navigatePush(this.props.navigator, 'MyRewards');
                 }   
                 else{

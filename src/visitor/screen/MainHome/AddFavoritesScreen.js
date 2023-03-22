@@ -551,7 +551,7 @@ export class AddFavoritesScreen extends SGBaseScreen {
             <RootView accessible={true} accessibilityLabel={'AddFavoritesScreenRootView'} style={style.mainContainer}>
                 <TabView tabBarFloatingStyle={{ position: 'absolute', top: SGHelperWindow.getHeaderHeight() + SGHelperWindow.getStatusBarHeight(), transform: [{ translateY: this._baseAnimY.interpolate({ inputRange: [-1, 0], outputRange: [0, SGHelperWindow.getHeaderHeight()] }) },], }} tabBarPosition={'floating'} accessible={true} accessibilityLabel={'AddFavoritesScreenTabView'} onChangeTab={this._onChangeTab.bind(this)} tabBarStyle={style.tabBarStyle} tabBarTextStyle={style.tabBarTextStyle} scrollableTabBar tabBarUnderlineStyle={style.tabBarUnderlineStyle} tabBarActiveTextColor={'#000000'} tabBarInactiveTextColor={'#716E6E'} tabBarActiveTextPreset={Text.preset.titleH2B} tabBarInactiveTextPreset={Text.preset.titleH2} style={{ backgroundColor: '#FFFFFF' }} initialPage={0} renderTabBar={() => <DefaultTabBar />}>
                     
-                    {
+                {/* {
                              this.dataPlace.alreadyMount ?
                                 this.dataPlace.arrData.length !== 0 ?
                                     <FlatList  accessible={true} accessibilityLabel={'AddFavoritesScreenPlaceList'} tabLabel={SGLocalize.translate('AddFavoritesScreen.placeTabTitle')} showsVerticalScrollIndicator={false} contentContainerStyle={style.flatListBGColor} data={this.dataPlace.arrData} renderItem={({ item, index }) => {
@@ -594,7 +594,7 @@ export class AddFavoritesScreen extends SGBaseScreen {
                                 <View tabLabel={SGLocalize.translate('AddFavoritesScreen.placeTabTitle')} style={{ flex: 1}}>
                                     <ActivityIndicator preset={ActivityIndicator.preset.h1}></ActivityIndicator>
                                 </View> 
-                    }
+                    } */}
 
                     {
                              this.dataStore.alreadyMount ?
@@ -618,7 +618,7 @@ export class AddFavoritesScreen extends SGBaseScreen {
                                             </React.Fragment>
                                         )
                                     }}
-                                    scrollEventThrottle={100} onScroll={this.baseOnScrollHandler.bind(this)} onMomentumScrollBegin={this.baseOnMomentumScrollBeginHandler.bind(this)} onScrollEndDrag={this.baseOnScrollEndDragHandler.bind(this)} onMomentumScrollEnd={this.baseOnMomentumScrollEndHandler.bind(this)} showsVerticalScrollIndicator={false} refreshControl={
+                                    scrollEventThrottle={100} onScroll={this.baseOnScrollHandler.bind(this)} onMomentumScrollBegin={this.baseOnMomentumScrollBeginHandler.bind(this)} onScrollEndDrag={this.baseOnScrollEndDragHandler.bind(this)} onMomentumScrollEnd={this.baseOnMomentumScrollEndHandler.bind(this)}  refreshControl={
                                         <RefreshControl refreshing={this.state.refreshStore} onRefresh={this._onRefreshStorePaging.bind(this)} />
                                     } ListHeaderComponent={
                                         <View style={{ height: SGHelperWindow.getHeaderHeight() * 3 + SGHelperWindow.getStatusBarHeight(), width: w, justifyContent: 'flex-end' }}>
@@ -665,7 +665,7 @@ export class AddFavoritesScreen extends SGBaseScreen {
                                             )
                                      
                                         }}
-                                    scrollEventThrottle={100} onScroll={this.baseOnScrollHandler.bind(this)} onMomentumScrollBegin={this.baseOnMomentumScrollBeginHandler.bind(this)} onScrollEndDrag={this.baseOnScrollEndDragHandler.bind(this)} onMomentumScrollEnd={this.baseOnMomentumScrollEndHandler.bind(this)} showsVerticalScrollIndicator={false} refreshControl={
+                                    scrollEventThrottle={100} onScroll={this.baseOnScrollHandler.bind(this)} onMomentumScrollBegin={this.baseOnMomentumScrollBeginHandler.bind(this)} onScrollEndDrag={this.baseOnScrollEndDragHandler.bind(this)} onMomentumScrollEnd={this.baseOnMomentumScrollEndHandler.bind(this)} refreshControl={
                                         <RefreshControl refreshing={this.state.refreshResto} onRefresh={this._onRefreshRestoPaging.bind(this)} />
                                     } ListHeaderComponent={
                                         <View style={{ height: SGHelperWindow.getHeaderHeight() * 3 + SGHelperWindow.getStatusBarHeight(), width: w, justifyContent: 'flex-end' }}>

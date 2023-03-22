@@ -23,6 +23,7 @@ import { tbSystemParamsDAO, tbSystemParamsData } from '../../db/tbSystemParamsDA
 import { tbCOneSignalAPI } from '../../api/tbCOneSignalAPI';
 
 import MyTranslator from '../../../plugin/lessons/locale/MyTranslator';
+
 export class SignUpFormScreen extends SGBaseScreen {
     state = {
         choosenIndex: 0
@@ -193,6 +194,7 @@ export class SignUpFormScreen extends SGBaseScreen {
         data.fPassword = SGHelperType.encrypt(data.fPassword);
         data.fLanguage = this.Language;
         data.fIsSimulator = await DeviceInfo.isEmulator()
+
         if(data.fIsSimulator && this.referralCode!==''){
             SGDialogBox.hideDialogBox(this.dbID);
             SGDialogBox.showFail(null,'Cannot Use Referral Code','We are sorry, only user from real device and not simulator can use referral code. Please clear the referral code to proceed.','Close',()=>{});

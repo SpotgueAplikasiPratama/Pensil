@@ -190,9 +190,9 @@ export class FirstVerifyOTPScreen extends SGBaseScreen {
                 </TouchableOpacity> 
                 :
                 <View style={{flexDirection:'row'}}>
-                    <TouchableOpacity onPress={() => {this._onResendWaOrSmsPress('sms')}}>
+                    {/* <TouchableOpacity onPress={() => {this._onResendWaOrSmsPress('sms')}}>
                         <Text accessible={true} preset={Text.preset.titleH5B} style={style.text3}>{SGLocalize.translate("VerifyOTPScreen.text3") + ' '+ 'SMS'}</Text>
-                    </TouchableOpacity> 
+                    </TouchableOpacity>  */}
                     <TouchableOpacity onPress={() => {this._onResendWaOrSmsPress('whatsapp')}}>
                         <Text accessible={true} preset={Text.preset.titleH5B} style={style.text3}>{SGLocalize.translate("VerifyOTPScreen.text3") + ' '+ 'Whatsapp'}</Text>
                     </TouchableOpacity> 
