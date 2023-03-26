@@ -5,6 +5,7 @@
 #import <React/RCTRootView.h>
 #import "Orientation.h"
 #import <React/RCTAppSetupUtils.h>
+#import <React/RCTLinkingManager.h>
 
 #if RCT_NEW_ARCH_ENABLED
 #import <React/CoreModulesPlugins.h>
@@ -15,6 +16,8 @@
 #import <ReactCommon/RCTTurboModuleManager.h>
 
 #import <react/config/ReactNativeConfig.h>
+#import <React/RCTLinkingManager.h>
+
 
 static NSString *const kRNConcurrentRoot = @"concurrentRoot";
 
@@ -132,5 +135,23 @@ static NSString *const kRNConcurrentRoot = @"concurrentRoot";
 }
 
 #endif
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+            options:(nonnull NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options
+{
+  // [[FBSDKApplicationDelegate sharedInstance] application:application
+  //                                                openURL:url
+  //                                                options:options];
+  // return YES;
+  // return [[FBSDKApplicationDelegate sharedInstance] application:application openURL:url options:options] || [RNGoogleSignin application:application openURL:url options:options]||[RCTLinkingManager application:application openURL:url options:options];
+  return [RCTLinkingManager application:application openURL:url options:options];
+}
 
+- (BOOL)application:(UIApplication *)application continueUserActivity:(nonnull NSUserActivity *)userActivity
+ restorationHandler:(nonnull void (^)(NSArray<id<UIUserActivityRestoring>> * _Nullable))restorationHandler
+{
+ return [RCTLinkingManager application:application
+                  continueUserActivity:userActivity
+                    restorationHandler:restorationHandler];
+}
 @end
