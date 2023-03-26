@@ -34,7 +34,11 @@ export class SGBaseScreen extends SGBaseControl {
     this._deepLinkingHandlerShareMessage = null;
     this._pushNotification = false;
     this._shareMessage = false;
-    this._canGoBack = SGHelperNavigation.canGoBack(this.props.navigation);
+    this._canGoBack = SGHelperNavigation.canGoBack(this.props.navigation);    
+    this._baseAnimVar = new Animated.Value(0);
+  }
+
+  setDeepLinking(){
     if (!this._canGoBack) {
       console.log('canGoBack')
       if(SGHelperGlobalVar.isVar('deepLinkingURL')){
@@ -85,7 +89,6 @@ export class SGBaseScreen extends SGBaseControl {
         }
       }).bind(this));
     }
-    this._baseAnimVar = new Animated.Value(0);
   }
 
   baseCreateAnimation(duration, onEnd) {
@@ -728,7 +731,6 @@ _checkDeepLinkingHandlerShareMessage(value) {
     console.log(url)
     if (url != null && url != '') {
       var isShareMessage = Platform.OS === 'ios' ? url.includes(SGHelperGlobalVar.getVar('UriScheme3')) : url.includes(SGHelperGlobalVar.getVar('UriScheme2'))
-
       if (isShareMessage) {
         if(url.includes(SGHelperGlobalVar.getVar('UriScheme4'))){
           var urischeme = SGHelperGlobalVar.getVar('UriScheme4') 
@@ -864,8 +866,12 @@ _checkDeepLinkingHandlerShareMessage(value) {
         console.log("MASUK KE ELSE Home")
         if(url.includes(SGHelperGlobalVar.getVar('UriScheme4'))){
           var urischeme = SGHelperGlobalVar.getVar('UriScheme4') 
-        }else{
+        }else if(url.includes(SGHelperGlobalVar.getVar('UriScheme2'))){
           var urischeme = SGHelperGlobalVar.getVar('UriScheme2')
+        }else if(url.includes(SGHelperGlobalVar.getVar('UriScheme3'))){
+        var urischeme = SGHelperGlobalVar.getVar('UriScheme3')
+        }else if(url.includes(SGHelperGlobalVar.getVar('UriScheme1'))){
+          var urischeme = SGHelperGlobalVar.getVar('UriScheme1')
         }
         var app_link = url.split(urischeme);
         console.log(app_link)

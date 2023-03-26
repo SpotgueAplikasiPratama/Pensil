@@ -517,13 +517,13 @@ export class SplashScreen extends SGBaseScreen {
             let notif = notifReceivedEvent.getNotification();
             setTimeout(() => notifReceivedEvent.complete(notif), 0);
         });
-        Linking.getInitialURL().then((u) => {
-            if (u !== null) {
-                console.log("SPLASH SCREEN YOH: ")
-                console.log(u)
-                SGHelperGlobalVar.addVar('deepLinkingURL', u.toLowerCase())
-            }
-        });
+        // Linking.getInitialURL().then((u) => {
+        //     if (u !== null) {
+        //         console.log("SPLASH SCREEN YOH: ")
+        //         console.log(u)
+        //         SGHelperGlobalVar.addVar('deepLinkingURL', u.toLowerCase())
+        //     }
+        // });
         // OneSignal.promptForPushNotificationsWithUserResponse(response => {
         //     // console.log(response)
         // });

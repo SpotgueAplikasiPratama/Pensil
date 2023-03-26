@@ -381,7 +381,7 @@ const Stack = createStackNavigator();
         <Stack.Screen name="WhatToGiftResult" component={optimize(WhatToGiftResultScreen)} />
         <Stack.Screen name="WhatToGiftResultDetail" component={optimize(WhatToGiftResultDetailScreen)} />
         <Stack.Screen name="ParkingLayoutFullScreen" component={optimize(ParkingLayoutFullScreen)} />
-        <Stack.Screen name="DemoVerificationScreen" component={optimize(DemoVerificationScreen)} />
+        {/* <Stack.Screen name="DemoVerificationScreen" component={optimize(DemoVerificationScreen)} /> */}
         <Stack.Screen name="SearchStart" component={optimize(SearchStartScreen)} />
         <Stack.Screen name="SearchAll" component={optimize(SearchAllScreen)} />
         <Stack.Screen name="SearchResultPlace" component={optimize(SearchResultPlaceScreen)} />
