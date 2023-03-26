@@ -21,6 +21,7 @@ import {SGHelperAPICall, SGHelperGlobalVar} from './src/core/helper';
 import 'react-native-get-random-values'
 import {mode} from './app.json';
 if(mode==='live'){
+    console.log2=console.log;
     console.log=()=>{};
     SGHelperGlobalVar.addVar('GlobalAppMode',mode);
 }

@@ -68,9 +68,8 @@ export class SGBaseScreen extends SGBaseControl {
         }
       });
 
-      Linking.addEventListener('url', (u) => {
-        console.log(u)
-
+      Linking.removeAllListeners('url');
+      Linking.addEventListener('url', ((u) => {
         if (!SGHelperGlobalVar.isVar('deepLinkingURL') && !this._pushNotification) {
           console.log('a')
           SGHelperGlobalVar.addVar('deepLinkingURL', u.url)
@@ -81,11 +80,10 @@ export class SGBaseScreen extends SGBaseControl {
         }
         if (this._deepLinkingHandlerShareMessage !== null && !this._pushNotification) {
           console.log('c')
-          this._deepLinkingHandlerShareMessage();
+          this._deepLinkingHandlerShareMessage(u.url);
           this._pushNotification = false;
         }
-      });
-
+      }).bind(this));
     }
     this._baseAnimVar = new Animated.Value(0);
   }
@@ -754,15 +752,15 @@ _checkDeepLinkingHandlerShareMessage(value) {
           case '': break;//do nothing
           case 'building':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "MallHome", { contentKey: link[1] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "MallHome", { contentKey: link[1] });
             break;
           case 'store':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "StoreHome", { contentKey: link[1] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "StoreHome", { contentKey: link[1] });
             break;
           case 'resto':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "RestoHome", { contentKey: link[1] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "RestoHome", { contentKey: link[1] });
             break;
           case 'id-ID':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
@@ -774,91 +772,91 @@ _checkDeepLinkingHandlerShareMessage(value) {
             break;
           case 'restomenu':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "RestoHome", { contentKey: link[1],movetoRestoMenu:true });
+            SGHelperNavigation.navigatePush(this.props.navigation, "RestoHome", { contentKey: link[1],movetoRestoMenu:true });
             break;
           case 'storecatalog':
               SGHelperGlobalVar.addVar('deepLinkingURL', '');
-              SGHelperNavigation.navigatePush(this.props.navigator, "StoreHome", { contentKey: link[1],movetostorecatalog:true });
+              SGHelperNavigation.navigatePush(this.props.navigation, "StoreHome", { contentKey: link[1],movetostorecatalog:true });
               break;
           case 'facility':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "FacilityDetail", { contentKey: link[1] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "FacilityDetail", { contentKey: link[1] });
             break;
           case 'eventbuilding':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "PlaceEventDetail", { contentKey: link[1] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "PlaceEventDetail", { contentKey: link[1] });
             break;
           case 'eventstore':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "StorePromoDetail", { contentKey: link[1] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "StorePromoDetail", { contentKey: link[1] });
             break;
           case 'eventresto':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "RestoPromoDetail", { contentKey: link[1] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "RestoPromoDetail", { contentKey: link[1] });
             break;
           case 'productstore':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "StoreProductDetail", { contentKey: link[1], storeKey: link[2] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "StoreProductDetail", { contentKey: link[1], storeKey: link[2] });
             break;
           case 'productresto':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "RestoMenuDetail", { contentKey: link[1], restoKey: link[2] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "RestoMenuDetail", { contentKey: link[1], restoKey: link[2] });
             break;
           case 'inbox':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "InboxDetail", { commentKey: link[1] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "InboxDetail", { commentKey: link[1] });
             break;
           case 'notification':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "NotificationDetail", { fID: link[1] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "NotificationDetail", { fID: link[1] });
             break;
           case 'storewhattogift':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "WhatToGiftResultDetail", { contentKey: link[1] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "WhatToGiftResultDetail", { contentKey: link[1] });
             break;
           case 'restowhattogift':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "WhatToGiftResultDetail", { contentKey: link[1] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "WhatToGiftResultDetail", { contentKey: link[1] });
             break;
           case 'clothtobuy':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "ClothToBuyResultDetail", { contentKey: link[1] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "ClothToBuyResultDetail", { contentKey: link[1] });
             break;
           case 'whattoeat':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "WhatToEatResultDetail", { contentKey: link[1] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "WhatToEatResultDetail", { contentKey: link[1] });
             break;
           case 'eventsponsor':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "SponsorshipDetail", { contentKey: link[1] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "SponsorshipDetail", { contentKey: link[1] });
             break;
           case 'StoreAuction':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "AuctionDetail", { contentKey: link[1] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "AuctionDetail", { contentKey: link[1] });
             break;
           case 'RestoAuction':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "AuctionDetail", { contentKey: link[1] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "AuctionDetail", { contentKey: link[1] });
             break;
           case 'download':
               SGHelperGlobalVar.addVar('deepLinkingURL', '');
-              SGHelperNavigation.navigatePush(this.props.navigator, "MyReferralInMyReward", { referral: true } );
+              SGHelperNavigation.navigatePush(this.props.navigation, "MyReferralInMyReward", { referral: true } );
           break;
           case 'quiztenant':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "Quiz", { fID: link[1]});
+            SGHelperNavigation.navigatePush(this.props.navigation, "Quiz", { fID: link[1]});
             break;
           case 'quizbuilding':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "QuizBuilding", { fID: link[1]});
+            SGHelperNavigation.navigatePush(this.props.navigation, "QuizBuilding", { fID: link[1]});
             break;
           case 'qrproductstore':
               SGHelperGlobalVar.addVar('deepLinkingURL', '');
-              SGHelperNavigation.navigatePush(this.props.navigator, "StoreProductDetail", { contentKey: link[1], storeKey: link[2],qr:true });
+              SGHelperNavigation.navigatePush(this.props.navigation, "StoreProductDetail", { contentKey: link[1], storeKey: link[2],qr:true });
               break;
           case 'qrproductresto':
               SGHelperGlobalVar.addVar('deepLinkingURL', '');
-              SGHelperNavigation.navigatePush(this.props.navigator, "RestoMenuDetail", { contentKey: link[1], restoKey: link[2],qr:true });
+              SGHelperNavigation.navigatePush(this.props.navigation, "RestoMenuDetail", { contentKey: link[1], restoKey: link[2],qr:true });
               break;
           default: console.log("do nothing")
         }
@@ -885,15 +883,15 @@ _checkDeepLinkingHandlerShareMessage(value) {
           case '': break;//do nothing
           case 'building':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "MallHome", { contentKey: link[1] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "MallHome", { contentKey: link[1] });
             break;
           case 'store':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "StoreHome", { contentKey: link[1] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "StoreHome", { contentKey: link[1] });
             break;
           case 'resto':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "RestoHome", { contentKey: link[1] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "RestoHome", { contentKey: link[1] });
             break;
           case 'id-ID':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
@@ -905,91 +903,91 @@ _checkDeepLinkingHandlerShareMessage(value) {
             break;
           case 'restomenu':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "RestoHome", { contentKey: link[1],movetoRestoMenu:true });
+            SGHelperNavigation.navigatePush(this.props.navigation, "RestoHome", { contentKey: link[1],movetoRestoMenu:true });
             break;
           case 'storecatalog':
               SGHelperGlobalVar.addVar('deepLinkingURL', '');
-              SGHelperNavigation.navigatePush(this.props.navigator, "StoreHome", { contentKey: link[1],movetostorecatalog:true });
+              SGHelperNavigation.navigatePush(this.props.navigation, "StoreHome", { contentKey: link[1],movetostorecatalog:true });
             break;
           case 'facility':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "FacilityDetail", { contentKey: link[1] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "FacilityDetail", { contentKey: link[1] });
             break;
           case 'eventbuilding':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "PlaceEventDetail", { contentKey: link[1] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "PlaceEventDetail", { contentKey: link[1] });
             break;
           case 'eventstore':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "StorePromoDetail", { contentKey: link[1] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "StorePromoDetail", { contentKey: link[1] });
             break;
           case 'eventresto':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "RestoPromoDetail", { contentKey: link[1] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "RestoPromoDetail", { contentKey: link[1] });
             break;
           case 'productstore':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "StoreProductDetail", { contentKey: link[1], storeKey: link[2] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "StoreProductDetail", { contentKey: link[1], storeKey: link[2] });
             break;
           case 'productresto':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "RestoMenuDetail", { contentKey: link[1], restoKey: link[2] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "RestoMenuDetail", { contentKey: link[1], restoKey: link[2] });
             break;
           case 'inbox':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "InboxDetail", { commentKey: link[1] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "InboxDetail", { commentKey: link[1] });
             break;
           case 'notification':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "NotificationDetail", { fID: link[1] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "NotificationDetail", { fID: link[1] });
             break;
           case 'storewhattogift':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "WhatToGiftResultDetail", { contentKey: link[1] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "WhatToGiftResultDetail", { contentKey: link[1] });
             break;
           case 'restowhattogift':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "WhatToGiftResultDetail", { contentKey: link[1] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "WhatToGiftResultDetail", { contentKey: link[1] });
             break;
           case 'clothtobuy':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "ClothToBuyResultDetail", { contentKey: link[1] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "ClothToBuyResultDetail", { contentKey: link[1] });
             break;
           case 'whattoeat':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "WhatToEatResultDetail", { contentKey: link[1] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "WhatToEatResultDetail", { contentKey: link[1] });
             break;
           case 'eventsponsor':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "SponsorshipDetail", { contentKey: link[1] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "SponsorshipDetail", { contentKey: link[1] });
             break;
           case 'StoreAuction':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "AuctionDetail", { contentKey: link[1] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "AuctionDetail", { contentKey: link[1] });
             break;
           case 'RestoAuction':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "AuctionDetail", { contentKey: link[1] });
+            SGHelperNavigation.navigatePush(this.props.navigation, "AuctionDetail", { contentKey: link[1] });
             break;
           case 'download':
               SGHelperGlobalVar.addVar('deepLinkingURL', '');
-              SGHelperNavigation.navigatePush(this.props.navigator, "MyReferralInMyReward", { referral: true } );
+              SGHelperNavigation.navigatePush(this.props.navigation, "MyReferralInMyReward", { referral: true } );
           break;
           case 'quiztenant':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "Quiz", { fID: link[1]});
+            SGHelperNavigation.navigatePush(this.props.navigation, "Quiz", { fID: link[1]});
             break;
           case 'quizbuilding':
             SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigator, "QuizBuilding", { fID: link[1]});
+            SGHelperNavigation.navigatePush(this.props.navigation, "QuizBuilding", { fID: link[1]});
             break;
           case 'qrproductstore':
               SGHelperGlobalVar.addVar('deepLinkingURL', '');
-              SGHelperNavigation.navigatePush(this.props.navigator, "StoreProductDetail", { contentKey: link[1], storeKey: link[2],qr:true });
+              SGHelperNavigation.navigatePush(this.props.navigation, "StoreProductDetail", { contentKey: link[1], storeKey: link[2],qr:true });
               break;
           case 'qrproductresto':
               SGHelperGlobalVar.addVar('deepLinkingURL', '');
-              SGHelperNavigation.navigatePush(this.props.navigator, "RestoMenuDetail", { contentKey: link[1], restoKey: link[2],qr:true });
+              SGHelperNavigation.navigatePush(this.props.navigation, "RestoMenuDetail", { contentKey: link[1], restoKey: link[2],qr:true });
               break;
           default: console.log("do nothing")
         }

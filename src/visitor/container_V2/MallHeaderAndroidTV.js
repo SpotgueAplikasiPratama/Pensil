@@ -64,7 +64,7 @@ export class MallHeaderAndroidTV extends SGBaseContainer {
                             </View>
                         </View>
                         <View style={{marginRight:3*p,marginTop:2*p}}>
-                            <QRImage disabledText value={'app.spotgue.com'} preset={QRImage.preset.wCustom} textPreset={Text.preset.h12} textStyle={{ fontSize:Math.floor( 3.75 * Math.pow(1.15, -7) * w * 0.01)}}></QRImage>
+                            <QRImage disabledText value={'mag.spotgue.com'} preset={QRImage.preset.wCustom} textPreset={Text.preset.h12} textStyle={{ fontSize:Math.floor( 3.75 * Math.pow(1.15, -7) * w * 0.01)}}></QRImage>
                             <Text style={{fontSize: Math.floor( 3.75 * Math.pow(1.15, -7) * w * 0.01), fontFamily: SGHelperStyle.fontFamily.regular, textAlign: 'left', textAlignVertical: 'top', color: SGHelperStyle.color.SGText.TextBlack, marginVertical:   Math.pow(1.16, -7) * w * 0.0125, marginHorizontal: w * 0.01, color: '#A2A2A2'}}>Download Sekarang</Text>
                         </View>
                     </View>

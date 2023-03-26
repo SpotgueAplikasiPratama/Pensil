@@ -230,9 +230,14 @@ const Stack = createStackNavigator();
   // SGHelperGlobalVar.addVar("APICommon", 'https://spotgue-visitor-api-dev.azurewebsites.net/api/v1/common/');
   SGHelperGlobalVar.addVar("APICommon", 'https://mag-visitor-api-dev.azurewebsites.net/api/v1/common/');
   // SGHelperGlobalVar.addVar("APIBuilding", 'https://spotgue-visitor-api-dev.azurewebsites.net/api/v1/building/');
-  SGHelperGlobalVar.addVar('UriScheme1', 'spotguevisitor://');
-  SGHelperGlobalVar.addVar('UriScheme2', 'https://app.spotgue.com/');
-  SGHelperGlobalVar.addVar('UriScheme3', 'spotguevisitor://web/');
+
+  //Urischeme1 for push notification
+  SGHelperGlobalVar.addVar('UriScheme1', 'magvisitor://');
+  //Urischeme2 for shared message Android
+  SGHelperGlobalVar.addVar('UriScheme2', 'https://mag.spotgue.com/');
+  //Urischeme3 for shared message iOS
+  SGHelperGlobalVar.addVar('UriScheme3', 'magvisitor://web/');
+  //Urischeme4 for ??
   SGHelperGlobalVar.addVar('UriScheme4', 'https://spotgue.azurewebsites.net/');
   SGHelperGlobalVar.addVar("SplashScreen","Splash")
   SGHelperGlobalVar.addVar("PauseViewPager",false);
@@ -242,6 +247,7 @@ const Stack = createStackNavigator();
   SGHelperGlobalVar.addVar("APIMapStatus","Primary");
   SGHelperGlobalVar.addVar("RTOCount",0);
   SGHelperGlobalVar.addVar("PluginFileCache", {});
+  SGHelperGlobalVar.addVar("InitialDeepLinkURLHandled", false);
 
   // SGHelperGlobalVar.addVar("Yoh",true);
   //improve transition speed

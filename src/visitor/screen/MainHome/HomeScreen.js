@@ -329,8 +329,15 @@ export class HomeScreen extends SGBaseScreen {
     //this._testfunction();
     console.log('test function')
     this._checkDeepLinkingHandlerPushNotification();
-    this._checkDeepLinkingHandlerShareMessage();
-    SGHelperGlobalVar.addVar('deepLinkingURL', '');
+    if(!SGHelperGlobalVar.getVar("InitialDeepLinkURLHandled")){
+      var url = await Linking.getInitialURL();
+      SGHelperGlobalVar.addVar('deepLinkingURL', '');
+      if(SGHelperType.isDefined(url)){
+        SGHelperGlobalVar.addVar('deepLinkingURL', url);
+        this._checkDeepLinkingHandlerShareMessage(url);
+      }
+      SGHelperGlobalVar.setVar("InitialDeepLinkURLHandled",true);  
+    }
     await this._onRefreshDataBooking();
     await this._checkingCallingAPI();
     this.showChangeProfilePrompt();
