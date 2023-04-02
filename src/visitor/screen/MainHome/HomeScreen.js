@@ -1206,12 +1206,12 @@ export class HomeScreen extends SGBaseScreen {
                       <Text accessible={true} accessibilityLabel={'ProfileHeaderContainerUName'} style={style.myReferralText} preset={Text.preset.titleH3B}>{SGLocalize.translate('ProfileScreen.MyReferralButton')}</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity onPress={() => { SGHelperNavigation.navigatePush(this.props.navigation, 'MyHealth') }}>
+                    {/* <TouchableOpacity onPress={() => { SGHelperNavigation.navigatePush(this.props.navigation, 'MyHealth') }}>
                       <View style={{ flexDirection: 'row' }}>
                         <Icon name={Icon.Icon.injection} preset={Icon.preset.titleH3B} style={{ color: '#63AEE0' }}></Icon>
                         <Text style={style.textMyHealth} preset={Text.preset.titleH3B}>{SGLocalize.translate('MyHealth.MyVaccineTitle')}</Text>
                       </View>
-                    </TouchableOpacity>
+                    </TouchableOpacity> */}
                   </View>
                 }
 

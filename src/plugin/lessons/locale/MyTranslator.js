@@ -83,6 +83,7 @@ export default class MyTranslator {
           addReceiptButton: 'Tambahkan Struk',
           receiptNumberValidator: 'Nomor Struk harus diisi',
           receiptImageValidator: 'Foto Struk harus diisi',
+          receiptSameValidator: 'Anda memasukkan nomor struk yang sama dengan nomor struk sebelumnya. pastikan kembali nomor struk yang anda isi',
           receiptAmountValidator: 'Harga Struk Harus Melebihi Minimum Total Belanja',
           storeNameValidator: 'Nama Toko/Resto harus dipilih',
           receiptDateValidator: 'Struk untuk Tanggal yang dipilih sudah tidak berlaku',

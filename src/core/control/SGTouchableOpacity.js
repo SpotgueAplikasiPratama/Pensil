@@ -14,6 +14,7 @@ import { Platform } from 'react-native';
 import { TouchableOpacity, TouchableHighlight } from 'react-native';
 import { SGBaseControl } from './SGBaseControl';
 import { SGHelperStyle } from '../helper/SGHelperStyle';
+import Pressable from 'react-native/Libraries/Components/Pressable/Pressable';
 
 export class SGTouchableOpacity extends SGBaseControl {
     constructor(props, context, ...args) {
@@ -37,7 +38,7 @@ export class SGTouchableOpacity extends SGBaseControl {
         }
         return (
             !this.props.hidden &&
-            <TouchableOpacity accessible={true} accessibilityLabel={'SGTouchableOpacityRootTouchable'} {...myProps} />
+            <Pressable accessible={true} accessibilityLabel={'SGTouchableOpacityRootTouchable'} {...myProps} />
         );
     }
 }
