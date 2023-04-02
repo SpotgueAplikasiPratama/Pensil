@@ -38,38 +38,34 @@ export class SGBaseScreen extends SGBaseControl {
     this._baseAnimVar = new Animated.Value(0);
   }
 
+  clearDeepLinking(){
+    if (!this._canGoBack) {
+      SGHelperOneSignal.clearHandlers()
+      Linking.removeListener('url', () => { })
+    }
+  }
+
   setDeepLinking(){
     if (!this._canGoBack) {
+      console.log2('setDeepLinking')
       console.log('canGoBack')
       if(SGHelperGlobalVar.isVar('deepLinkingURL')){
         var url = SGHelperGlobalVar.getVar('deepLinkingURL')
         this._pushNotification = url.includes(SGHelperGlobalVar.getVar('UriScheme1')) ? true:false
       }
      
-      SGHelperOneSignal.setNotificationOpenedHandler( n => {
-       
-        console.log('deepLink')
+      SGHelperOneSignal.setNotificationOpenedHandler( n => {      
+        /* ByGH do nothing, already handled by Linking listener*/
 
-        if (!SGHelperGlobalVar.isVar('deepLinkingURL')) {
-          console.log('deepLink')
-          console.log(n)
-          SGHelperGlobalVar.addVar('deepLinkingURL', n.notification.additionalData.url)
-          //     let notif = n.getNotification();
-          // setTimeout(() => n.complete(notif), 0);
-
-        }
-        else {
-          console.log('deepLink')
-          console.log(n)
-          SGHelperGlobalVar.setVar('deepLinkingURL', n.notification.additionalData.url)
-        }
-        if (this._deepLinkingHandlerPushNotification !== null) {
-          console.log('deepLink')
-          console.log(n)
-          console.log("payLoad:" + n.notification.additionalData.url)
-          this._deepLinkingHandlerPushNotification();
-          // this._pushNotification = true;
-        }
+        // if (!SGHelperGlobalVar.isVar('deepLinkingURL')) {
+        //   SGHelperGlobalVar.addVar('deepLinkingURL', n.notification.launchURL)
+        // }
+        // else {
+        //   SGHelperGlobalVar.setVar('deepLinkingURL', n.notification.launchURL)
+        // }
+        // if (this._deepLinkingHandlerPushNotification !== null) {
+        //   this._deepLinkingHandlerPushNotification();
+        // }
       });
 
       Linking.removeAllListeners('url');
@@ -103,10 +99,6 @@ export class SGBaseScreen extends SGBaseControl {
   }
 
   componentWillUnmount() {
-    if (!this._canGoBack) {
-      //SGHelperOneSignal.clearHandlers()
-      //Linking.removeListener('url', () => { })
-    }
   }
 
   baseAnimateSlideOut() {
@@ -725,10 +717,92 @@ export class SGBaseScreen extends SGBaseControl {
     }
 };
 
+_checkDeepLinkingHandlerPushNotification() {
+  var url = SGHelperGlobalVar.getVar('deepLinkingURL')
+  console.log2("YOHANES1")
+  console.log2(url)
+  if (url != null && url != '') {
+    if (url.includes(SGHelperGlobalVar.getVar('UriScheme1'))) {
+      var urischeme = SGHelperGlobalVar.getVar('UriScheme1')
+      var app_link = url.split(urischeme);
+
+      var link = app_link[1].split('/');
+      // console.log(link[0])
+      console.log("RESET")
+      // SGHelperGlobalVar.addVar('deepLinkingURL', '');
+
+      switch (link[0]) {
+        case '': break;//do nothing
+        case 'building':
+          SGHelperGlobalVar.addVar('deepLinkingURL', '');
+          SGHelperNavigation.navigatePush(this.props.navigation, "MallHome", { contentKey: link[1], notificationKey: link[2] });
+          break;
+        case 'store':
+          SGHelperGlobalVar.addVar('deepLinkingURL', '');
+          SGHelperNavigation.navigatePush(this.props.navigation, "StoreHome", { contentKey: link[1], notificationKey: link[2] });
+          break;
+        case 'resto':
+          SGHelperGlobalVar.addVar('deepLinkingURL', '');
+          SGHelperNavigation.navigatePush(this.props.navigation, "RestoHome", { contentKey: link[1], notificationKey: link[2] });
+          break;
+        case 'facility':
+          SGHelperGlobalVar.addVar('deepLinkingURL', '');
+          SGHelperNavigation.navigatePush(this.props.navigation, "FacilityDetail", { contentKey: link[1], notificationKey: link[2] });
+          break;
+        case 'eventbuilding':
+          SGHelperGlobalVar.addVar('deepLinkingURL', '');
+          SGHelperNavigation.navigatePush(this.props.navigation, "NotificationDetail", { fID: link[1], fContentType: 'PlaceEvent' });
+          break;
+        case 'eventstore':
+          SGHelperGlobalVar.addVar('deepLinkingURL', '');
+          SGHelperNavigation.navigatePush(this.props.navigation, "NotificationDetail", { fID: link[1], fContentType: 'StorePromo' });
+          break;
+        case 'eventresto':
+          SGHelperGlobalVar.addVar('deepLinkingURL', '');
+          SGHelperNavigation.navigatePush(this.props.navigation, "NotificationDetail", { fID: link[1], fContentType: 'RestoPromo' });
+          break;
+        case 'productstore':
+          SGHelperGlobalVar.addVar('deepLinkingURL', '');
+          SGHelperNavigation.navigatePush(this.props.navigation, "StoreProductDetail", { contentKey: link[1], notificationKey: link[2] });
+          break;
+        case 'productresto':
+          SGHelperGlobalVar.addVar('deepLinkingURL', '');
+          SGHelperNavigation.navigatePush(this.props.navigation, "RestoMenuDetail", { contentKey: link[1], notificationKey: link[2] });
+          break;
+        case 'inbox':
+          SGHelperGlobalVar.addVar('deepLinkingURL', '');
+          SGHelperNavigation.navigatePush(this.props.navigation, "InboxDetail", { commentKey: link[1] });
+          break;
+        case 'notification':
+          SGHelperGlobalVar.addVar('deepLinkingURL', '');
+          SGHelperNavigation.navigatePush(this.props.navigation, "NotificationDetail", { fID: link[1], fContentType: "Broadcast" });
+          break;
+        case 'auctionstore':
+            SGHelperGlobalVar.addVar('deepLinkingURL', '');
+            SGHelperNavigation.navigatePush(this.props.navigation, "NotificationDetail", { fID: link[1], fContentType: "StoreAuction" });
+            break;
+        case 'auctionresto':
+          SGHelperGlobalVar.addVar('deepLinkingURL', '');
+          SGHelperNavigation.navigatePush(this.props.navigation, "NotificationDetail", { fID: link[1], fContentType: "RestoAuction" });
+          break;
+        case 'quiztenant':
+          SGHelperGlobalVar.addVar('deepLinkingURL', '');
+          SGHelperNavigation.navigatePush(this.props.navigation, "Quiz", { fID: link[1]});
+          break;
+        case 'quizbuilding':
+          SGHelperGlobalVar.addVar('deepLinkingURL', '');
+          SGHelperNavigation.navigatePush(this.props.navigation, "QuizBuilding", { fID: link[1]});
+          break;
+        default: console.log("do nothing")//SGHelperGlobalVar.addVar('deepLinkingURL', '');
+      }
+    }
+  }
+}
+
 _checkDeepLinkingHandlerShareMessage(value) {
     var url = value;
-    console.log("YOHANES2")
-    console.log(url)
+    // console.log2("YOHANES2")
+    // console.log2(url)
     if (url != null && url != '') {
       var isShareMessage = Platform.OS === 'ios' ? url.includes(SGHelperGlobalVar.getVar('UriScheme3')) : url.includes(SGHelperGlobalVar.getVar('UriScheme2'))
       if (isShareMessage) {

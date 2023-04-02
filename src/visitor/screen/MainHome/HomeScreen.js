@@ -242,93 +242,11 @@ export class HomeScreen extends SGBaseScreen {
     // this.forceUpdate();
   }
 
-  _checkDeepLinkingHandlerPushNotification() {
-    var url = SGHelperGlobalVar.getVar('deepLinkingURL')
-    console.log("YOHANES1")
-    console.log(url)
-    if (url != null && url != '') {
-      if (url.includes(SGHelperGlobalVar.getVar('UriScheme1'))) {
-        var urischeme = SGHelperGlobalVar.getVar('UriScheme1')
-        var app_link = url.split(urischeme);
-
-        var link = app_link[1].split('/');
-        // console.log(link[0])
-        console.log("RESET")
-        // SGHelperGlobalVar.addVar('deepLinkingURL', '');
-
-        switch (link[0]) {
-          case '': break;//do nothing
-          case 'building':
-            SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigation, "MallHome", { contentKey: link[1], notificationKey: link[2] });
-            break;
-          case 'store':
-            SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigation, "StoreHome", { contentKey: link[1], notificationKey: link[2] });
-            break;
-          case 'resto':
-            SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigation, "RestoHome", { contentKey: link[1], notificationKey: link[2] });
-            break;
-          case 'facility':
-            SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigation, "FacilityDetail", { contentKey: link[1], notificationKey: link[2] });
-            break;
-          case 'eventbuilding':
-            SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigation, "NotificationDetail", { fID: link[1], fContentType: 'PlaceEvent' });
-            break;
-          case 'eventstore':
-            SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigation, "NotificationDetail", { fID: link[1], fContentType: 'StorePromo' });
-            break;
-          case 'eventresto':
-            SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigation, "NotificationDetail", { fID: link[1], fContentType: 'RestoPromo' });
-            break;
-          case 'productstore':
-            SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigation, "StoreProductDetail", { contentKey: link[1], notificationKey: link[2] });
-            break;
-          case 'productresto':
-            SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigation, "RestoMenuDetail", { contentKey: link[1], notificationKey: link[2] });
-            break;
-          case 'inbox':
-            SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigation, "InboxDetail", { commentKey: link[1] });
-            break;
-          case 'notification':
-            SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigation, "NotificationDetail", { fID: link[1], fContentType: "Broadcast" });
-            break;
-          case 'auctionstore':
-              SGHelperGlobalVar.addVar('deepLinkingURL', '');
-              SGHelperNavigation.navigatePush(this.props.navigation, "NotificationDetail", { fID: link[1], fContentType: "StoreAuction" });
-              break;
-          case 'auctionresto':
-            SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigation, "NotificationDetail", { fID: link[1], fContentType: "RestoAuction" });
-            break;
-          case 'quiztenant':
-            SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigation, "Quiz", { fID: link[1]});
-            break;
-          case 'quizbuilding':
-            SGHelperGlobalVar.addVar('deepLinkingURL', '');
-            SGHelperNavigation.navigatePush(this.props.navigation, "QuizBuilding", { fID: link[1]});
-            break;
-          default: console.log("do nothing")//SGHelperGlobalVar.addVar('deepLinkingURL', '');
-        }
-      }
-    }
-  }
-
   async componentDidMount() {
     //Deep Linking
     //this._testfunction();
-    console.log('test function')
-    this._checkDeepLinkingHandlerPushNotification();
+    // console.log('test function')
+    // this._checkDeepLinkingHandlerPushNotification();
     await this._onRefreshDataBooking();
     await this._checkingCallingAPI();
     this.showChangeProfilePrompt();
@@ -1073,6 +991,7 @@ export class HomeScreen extends SGBaseScreen {
     clearInterval(this.interval);
     if (this._unsubscribe) { this._unsubscribe(); }
     BackHandler.removeEventListener('hardwareBackPress', this.onBackPress);
+    this.clearDeepLinking();
   }
 
   onBackPress() {
