@@ -324,9 +324,9 @@ export class ArrayOfReceiptCRUDList extends Core.Control.SGBaseContainer {
                     if(this.tempData.getCurrentJSON().fReceiptNumber == ''){
                         SGDialogBox.showWarning(null,Core.Control.SGLocalize.translate("globalText.FailText"),MyTranslator.tr('EarnPointForm.receiptNumberValidator'),Core.Control.SGLocalize.translate("AlertMessage.OK"),()=>{ },true)
                     }
-                    // else if(this.tempData.getCurrentJSON().fReceiptImage.length == 0){
-                    //     SGDialogBox.showWarning(null,Core.Control.SGLocalize.translate("globalText.FailText"),MyTranslator.tr('EarnPointForm.receiptImageValidator'),Core.Control.SGLocalize.translate("AlertMessage.OK"),()=>{ },true)   
-                    // }
+                    else if(this.tempData.getCurrentJSON().fReceiptImage.length == 0){
+                        SGDialogBox.showWarning(null,Core.Control.SGLocalize.translate("globalText.FailText"),MyTranslator.tr('EarnPointForm.receiptImageValidator'),Core.Control.SGLocalize.translate("AlertMessage.OK"),()=>{ },true)   
+                    }
                     else if(this.tempData.getCurrentJSON().fReceiptAmount < newRegisSetting.fNewRegistrationMinAmount){
                         SGDialogBox.showWarning(null,Core.Control.SGLocalize.translate("globalText.FailText"),MyTranslator.tr('EarnPointForm.receiptAmountValidator') + ' ' + newRegisSetting.fNewRegistrationMinAmount,Core.Control.SGLocalize.translate("AlertMessage.OK"),()=>{ },true)
                     }
