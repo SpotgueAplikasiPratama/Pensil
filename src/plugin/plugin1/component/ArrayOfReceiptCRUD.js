@@ -297,6 +297,15 @@ export class ArrayOfReceiptCRUDList extends Core.Control.SGBaseContainer {
                         data.push(this.tempData);
                         this.mode = 'list'
                         this.data = data
+                        if(this.data.length > 1){
+                            for(var i = 0; i < this.data.length; i++){
+                                if(this.data[i].getCurrentJSON().fStoreKey == this.tempData.getCurrentJSON().fStoreKey &&
+                                this.data[i].getCurrentJSON().fReceiptNumber == this.tempData.getCurrentJSON().fReceiptNumber){
+                                    SGDialogBox.showWarning(null,Core.Control.SGLocalize.translate("globalText.FailText"),MyTranslator.tr('EarnPointForm.receiptSameValidator'),Core.Control.SGLocalize.translate("AlertMessage.OK"),()=>{ },true)   
+                                    return
+                                }
+                            }
+                        }
                         this.refs.SV1.scrollToEnd();
                         this.props.updateArrayOfAnswer(this.data);
                         this.forceUpdate()
@@ -315,9 +324,9 @@ export class ArrayOfReceiptCRUDList extends Core.Control.SGBaseContainer {
                     if(this.tempData.getCurrentJSON().fReceiptNumber == ''){
                         SGDialogBox.showWarning(null,Core.Control.SGLocalize.translate("globalText.FailText"),MyTranslator.tr('EarnPointForm.receiptNumberValidator'),Core.Control.SGLocalize.translate("AlertMessage.OK"),()=>{ },true)
                     }
-                    else if(this.tempData.getCurrentJSON().fReceiptImage.length == 0){
-                        SGDialogBox.showWarning(null,Core.Control.SGLocalize.translate("globalText.FailText"),MyTranslator.tr('EarnPointForm.receiptImageValidator'),Core.Control.SGLocalize.translate("AlertMessage.OK"),()=>{ },true)   
-                    }
+                    // else if(this.tempData.getCurrentJSON().fReceiptImage.length == 0){
+                    //     SGDialogBox.showWarning(null,Core.Control.SGLocalize.translate("globalText.FailText"),MyTranslator.tr('EarnPointForm.receiptImageValidator'),Core.Control.SGLocalize.translate("AlertMessage.OK"),()=>{ },true)   
+                    // }
                     else if(this.tempData.getCurrentJSON().fReceiptAmount < newRegisSetting.fNewRegistrationMinAmount){
                         SGDialogBox.showWarning(null,Core.Control.SGLocalize.translate("globalText.FailText"),MyTranslator.tr('EarnPointForm.receiptAmountValidator') + ' ' + newRegisSetting.fNewRegistrationMinAmount,Core.Control.SGLocalize.translate("AlertMessage.OK"),()=>{ },true)
                     }
@@ -327,6 +336,15 @@ export class ArrayOfReceiptCRUDList extends Core.Control.SGBaseContainer {
                         data.push(this.tempData);
                         this.mode = 'list'
                         this.data = data
+                        if(this.data.length > 1){
+                            for(var i = 0; i < this.data.length; i++){
+                                if(this.data[i].getCurrentJSON().fStoreKey == this.tempData.getCurrentJSON().fStoreKey &&
+                                this.data[i].getCurrentJSON().fReceiptNumber == this.tempData.getCurrentJSON().fReceiptNumber){
+                                    SGDialogBox.showWarning(null,Core.Control.SGLocalize.translate("globalText.FailText"),MyTranslator.tr('EarnPointForm.receiptSameValidator'),Core.Control.SGLocalize.translate("AlertMessage.OK"),()=>{ },true)   
+                                    return
+                                }
+                            }
+                        }
                         this.refs.SV1.scrollToEnd();
                         this.props.updateArrayOfAnswer(this.data);
                         this.forceUpdate()
@@ -360,6 +378,15 @@ export class ArrayOfReceiptCRUDList extends Core.Control.SGBaseContainer {
                         data.push(this.tempData);
                         this.mode = 'list'
                         this.data = data
+                        if(this.data.length > 1){
+                            for(var i = 0; i < this.data.length; i++){
+                                if(this.data[i].getCurrentJSON().fStoreKey == this.tempData.getCurrentJSON().fStoreKey &&
+                                this.data[i].getCurrentJSON().fReceiptNumber == this.tempData.getCurrentJSON().fReceiptNumber){
+                                    SGDialogBox.showWarning(null,Core.Control.SGLocalize.translate("globalText.FailText"),MyTranslator.tr('EarnPointForm.receiptSameValidator'),Core.Control.SGLocalize.translate("AlertMessage.OK"),()=>{ },true)   
+                                    return
+                                }
+                            }
+                        }
                         this.refs.SV1.scrollToEnd();
                         this.props.updateArrayOfAnswer(this.data);
                         this.forceUpdate()
@@ -390,6 +417,15 @@ export class ArrayOfReceiptCRUDList extends Core.Control.SGBaseContainer {
                         data.push(this.tempData);
                         this.mode = 'list'
                         this.data = data
+                        if(this.data.length > 1){
+                            for(var i = 0; i < this.data.length; i++){
+                                if(this.data[i].getCurrentJSON().fStoreKey == this.tempData.getCurrentJSON().fStoreKey &&
+                                this.data[i].getCurrentJSON().fReceiptNumber == this.tempData.getCurrentJSON().fReceiptNumber){
+                                    SGDialogBox.showWarning(null,Core.Control.SGLocalize.translate("globalText.FailText"),MyTranslator.tr('EarnPointForm.receiptSameValidator'),Core.Control.SGLocalize.translate("AlertMessage.OK"),()=>{ },true)   
+                                    return
+                                }
+                            }
+                        }
                         this.refs.SV1.scrollToEnd();
                         this.props.updateArrayOfAnswer(this.data);
                         this.forceUpdate()
@@ -435,6 +471,15 @@ export class ArrayOfReceiptCRUDList extends Core.Control.SGBaseContainer {
                     }else{
                         var tempData = this.tempData;
                         var index = this.index
+                        if(data.length > 1){
+                            for(var i = 0; i < data.length; i++){
+                                if(data[i].getCurrentJSON().fStoreKey == tempData.getCurrentJSON().fStoreKey &&
+                                data[i].getCurrentJSON().fReceiptNumber == tempData.getCurrentJSON().fReceiptNumber){
+                                    SGDialogBox.showWarning(null,Core.Control.SGLocalize.translate("globalText.FailText"),MyTranslator.tr('EarnPointForm.receiptSameValidator'),Core.Control.SGLocalize.translate("AlertMessage.OK"),()=>{ },true)   
+                                    return
+                                }
+                            }
+                        }
                         this.data[index] = tempData
                         this.mode = 'list'
                         this.data = data
@@ -458,9 +503,9 @@ export class ArrayOfReceiptCRUDList extends Core.Control.SGBaseContainer {
                     if(this.tempData.getCurrentJSON().fReceiptNumber == ''){
                         SGDialogBox.showWarning(null,Core.Control.SGLocalize.translate("globalText.FailText"),MyTranslator.tr('EarnPointForm.receiptNumberValidator'),Core.Control.SGLocalize.translate("AlertMessage.OK"),()=>{ },true)
                     }
-                    else if(this.tempData.getCurrentJSON().fReceiptImage.length == 0){
-                        SGDialogBox.showWarning(null,Core.Control.SGLocalize.translate("globalText.FailText"),MyTranslator.tr('EarnPointForm.receiptImageValidator'),Core.Control.SGLocalize.translate("AlertMessage.OK"),()=>{ },true)   
-                    }
+                    // else if(this.tempData.getCurrentJSON().fReceiptImage.length == 0){
+                    //     SGDialogBox.showWarning(null,Core.Control.SGLocalize.translate("globalText.FailText"),MyTranslator.tr('EarnPointForm.receiptImageValidator'),Core.Control.SGLocalize.translate("AlertMessage.OK"),()=>{ },true)   
+                    // }
                     else if(this.tempData.getCurrentJSON().fReceiptAmount < newRegisSetting.fNewRegistrationMinAmount){
                         SGDialogBox.showWarning(null,Core.Control.SGLocalize.translate("globalText.FailText"),MyTranslator.tr('EarnPointForm.receiptAmountValidator') + ' ' + newRegisSetting.fNewRegistrationMinAmount,Core.Control.SGLocalize.translate("AlertMessage.OK"),()=>{ },true)
                     }
@@ -469,6 +514,15 @@ export class ArrayOfReceiptCRUDList extends Core.Control.SGBaseContainer {
                     }else{
                         var tempData = this.tempData;
                         var index = this.index
+                        if(data.length > 1){
+                            for(var i = 0; i < data.length; i++){
+                                if(data[i].getCurrentJSON().fStoreKey == tempData.getCurrentJSON().fStoreKey &&
+                                data[i].getCurrentJSON().fReceiptNumber == tempData.getCurrentJSON().fReceiptNumber){
+                                    SGDialogBox.showWarning(null,Core.Control.SGLocalize.translate("globalText.FailText"),MyTranslator.tr('EarnPointForm.receiptSameValidator'),Core.Control.SGLocalize.translate("AlertMessage.OK"),()=>{ },true)   
+                                    return
+                                }
+                            }
+                        }
                         this.data[index] = tempData
                         this.mode = 'list'
                         this.data = data
@@ -506,6 +560,15 @@ export class ArrayOfReceiptCRUDList extends Core.Control.SGBaseContainer {
                     }else{
                         var tempData = this.tempData;
                         var index = this.index
+                        if(data.length > 1){
+                            for(var i = 0; i < data.length; i++){
+                                if(data[i].getCurrentJSON().fStoreKey == tempData.getCurrentJSON().fStoreKey &&
+                                data[i].getCurrentJSON().fReceiptNumber == tempData.getCurrentJSON().fReceiptNumber){
+                                    SGDialogBox.showWarning(null,Core.Control.SGLocalize.translate("globalText.FailText"),MyTranslator.tr('EarnPointForm.receiptSameValidator'),Core.Control.SGLocalize.translate("AlertMessage.OK"),()=>{ },true)   
+                                    return
+                                }
+                            }
+                        }
                         this.data[index] = tempData
                         this.mode = 'list'
                         this.data = data
@@ -540,6 +603,15 @@ export class ArrayOfReceiptCRUDList extends Core.Control.SGBaseContainer {
                     }else{
                         var tempData = this.tempData;
                         var index = this.index
+                        if(data.length > 1){
+                            for(var i = 0; i < data.length; i++){
+                                if(data[i].getCurrentJSON().fStoreKey == tempData.getCurrentJSON().fStoreKey &&
+                                data[i].getCurrentJSON().fReceiptNumber == tempData.getCurrentJSON().fReceiptNumber){
+                                    SGDialogBox.showWarning(null,Core.Control.SGLocalize.translate("globalText.FailText"),MyTranslator.tr('EarnPointForm.receiptSameValidator'),Core.Control.SGLocalize.translate("AlertMessage.OK"),()=>{ },true)   
+                                    return
+                                }
+                            }
+                        }
                         this.data[index] = tempData
                         this.mode = 'list'
                         this.data = data
