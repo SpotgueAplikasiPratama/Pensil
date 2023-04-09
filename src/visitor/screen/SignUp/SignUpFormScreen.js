@@ -23,6 +23,8 @@ import { tbSystemParamsDAO, tbSystemParamsData } from '../../db/tbSystemParamsDA
 import { tbCOneSignalAPI } from '../../api/tbCOneSignalAPI';
 
 import MyTranslator from '../../../plugin/lessons/locale/MyTranslator';
+import { tbUserFavoriteData } from '../../db/tbUserFavoriteDAO';
+import { tbVUserFavoriteAPI } from '../../api/tbVUserFavoriteAPI';
 
 export class SignUpFormScreen extends SGBaseScreen {
     state = {
@@ -169,6 +171,14 @@ export class SignUpFormScreen extends SGBaseScreen {
         console.log(this.dbID)
         if(this.dbID!==null)SGDialogBox.hideDialogBox(this.dbID,true)
         // console.log(await tbSystemParamsDAO.consoleAllData())
+
+        //Favorite User
+        var userFavoriteData = new tbUserFavoriteData().getCurrentJSON();
+        userFavoriteData.fContentType = 'Place';
+        userFavoriteData.fContentKey = '853d2044-ca20-491a-a8b5-5e88b679a36f';
+        userFavoriteData.UserKey = sourceUserData.fID;
+        await tbVUserFavoriteAPI.addUserFavorite(userFavoriteData);
+
         SGHelperNavigation.navigateReset(this.props.navigation, 'Home',{signIn :true, page:1});
     }
     async _addUserHandler(data){
