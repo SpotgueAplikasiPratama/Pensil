@@ -92,7 +92,7 @@ export class SGIcon extends SGBaseControl {
         preview: 'Fontisto.preview',
         preview2: 'IonIcon.ios-attach',
         phone: 'AntIcon.phone',
-        casePhone: 'MCIcon.cellphone-iphone',
+        casePhone: 'MCIcon.cellphone',
         user: 'FAIcon.user',
         sync: 'MCIcon.sync',
         checkMark: 'IonIcon.md-checkmark',
