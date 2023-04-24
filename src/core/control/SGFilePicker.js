@@ -136,7 +136,9 @@ export class SGFilePicker extends SGBaseControl {
 
     async pickSingle() {
         try {
-            const res = await DocumentPicker.pick({ type: SGHelperType.isDefined(this.props.fileType) ? this.props.fileType : [SGFilePicker.fileType.all], });
+            // const res = await DocumentPicker.pick({ type: SGHelperType.isDefined(this.props.fileType) ? this.props.fileType : [SGFilePicker.fileType.all], });
+            const _res = await DocumentPicker.pick({ type: SGHelperType.isDefined(this.props.fileType) ? this.props.fileType : [SGFilePicker.fileType.all], });
+            const res = Array.isArray(_res)?_res[0]:_res;
             var maxSize = SGHelperType.isDefined(this.props.maxSize) ? this.props.maxSize : 8 * 1024 * 1024;
             var maxSizeLabel = (maxSize >= 1024 * 1024 ? Math.floor(maxSize / 1024 / 1024 * 10) / 10.0 + 'MB' : Math.floor(maxSize / 1024 * 10) / 10.0 + 'KB');
             if (res.size <= maxSize) {
