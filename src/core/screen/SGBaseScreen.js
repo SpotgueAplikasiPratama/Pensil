@@ -53,7 +53,19 @@ export class SGBaseScreen extends SGBaseControl {
       //   this._pushNotification = url.includes(SGHelperGlobalVar.getVar('UriScheme1')) ? true:false
       // }
      
-      SGHelperOneSignal.setNotificationOpenedHandler( n => {      
+      SGHelperOneSignal.setNotificationOpenedHandler( n => {
+        var url = n.notification.additionalData.url;
+        if (!SGHelperGlobalVar.isVar('deepLinkingURL') /*&& !this._pushNotification*/) {
+          SGHelperGlobalVar.addVar('deepLinkingURL', url)
+        }
+        else /*if (!this._pushNotification)*/ {
+          SGHelperGlobalVar.setVar('deepLinkingURL', url)
+        }
+        if (this._deepLinkingHandlerShareMessage !== null /*&& !this._pushNotification*/) {
+          this._deepLinkingHandlerShareMessage(url);
+          // this._pushNotification = false;
+        }
+      
         /* ByGH do nothing, already handled by Linking listener*/
 
         // if (!SGHelperGlobalVar.isVar('deepLinkingURL')) {
