@@ -20,7 +20,7 @@
 		AAE2ED86AA534A7C9FADD706 /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E6C3FB79E004D62881CFAE3 /* Montserrat-Regular.otf */; };
 		B01A030029C6D96A00A709A2 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01A02FF29C6D96A00A709A2 /* NotificationService.swift */; };
 		B01A030429C6D96A00A709A2 /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B01A02FD29C6D96A00A709A2 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		D6C7740D29FE3A490046C3E9 /* spotgue_notification.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C7740C29FE3A480046C3E9 /* spotgue_notification.wav */; };
+		D6C7741129FE3CE90046C3E9 /* spotgue_notification.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C7741029FE3CE90046C3E9 /* spotgue_notification.wav */; };
 		DC5DFBFE2380CACCDAE6DE28 /* libPods-OneSignalNotificationServiceExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C0B0845B8E48E9F898C2DC /* libPods-OneSignalNotificationServiceExtension.a */; };
 /* End PBXBuildFile section */
 
@@ -99,7 +99,7 @@
 		BCA96E5F297062C700CFAF84 /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
 		BCA96E60297062C700CFAF84 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
 		BCA96E61297062C700CFAF84 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
-		D6C7740C29FE3A480046C3E9 /* spotgue_notification.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = spotgue_notification.wav; path = ../android/app/src/main/res/raw/spotgue_notification.wav; sourceTree = "<group>"; };
+		D6C7741029FE3CE90046C3E9 /* spotgue_notification.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = spotgue_notification.wav; path = ../android/app/src/main/res/raw/spotgue_notification.wav; sourceTree = "<group>"; };
 		DE46E8BC8B904A10896E4190 /* Montserrat-Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Italic.otf"; path = "../assets/fonts/Montserrat-Italic.otf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -184,6 +184,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				D6C7741029FE3CE90046C3E9 /* spotgue_notification.wav */,
 				BCA96E51297062C700CFAF84 /* Fonts */,
 				13B07FAE1A68108700A75B9A /* MAGVisitor */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
@@ -222,7 +223,6 @@
 		B3A4D0F789F5444CBA2B0972 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D6C7740C29FE3A480046C3E9 /* spotgue_notification.wav */,
 				99BD1DD2EEB14676B79A1673 /* Montserrat-Bold.otf */,
 				DE46E8BC8B904A10896E4190 /* Montserrat-Italic.otf */,
 				4E6C3FB79E004D62881CFAE3 /* Montserrat-Regular.otf */,
@@ -393,7 +393,7 @@
 				222EF97565DB403993F635FA /* Montserrat-Italic.otf in Resources */,
 				AAE2ED86AA534A7C9FADD706 /* Montserrat-Regular.otf in Resources */,
 				685786681261430CB3DA5BB8 /* Ubuntu.ttf in Resources */,
-				D6C7740D29FE3A490046C3E9 /* spotgue_notification.wav in Resources */,
+				D6C7741129FE3CE90046C3E9 /* spotgue_notification.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
