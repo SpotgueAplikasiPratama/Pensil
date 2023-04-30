@@ -22,7 +22,7 @@ export class NoSortSearchBar extends SGBaseContainer {
             mainContainer: { width: w, height: SGHelperWindow.getHeaderHeight(), backgroundColor: '#191919', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingVertical: p, paddingLeft: p * 5, paddingRight: p * 1.5, borderBottomLeftRadius: p * 3.5, borderBottomRightRadius: p * 3.5 },
             iconBack: {width: w * 0.072, height: w * 0.072, backgroundColor: 'transparent', resizeMode: 'contain' },
             icon: { marginLeft: -2 * p,width: w * 0.095, height: w * 0.095, backgroundColor: 'transparent', resizeMode: 'contain' },
-            searchBar: { backgroundColor: '#FFFFFF', width: (w - (p * 2)) * 0.100 * 6, height: w*0.085, resizeMode: 'contain', alignItems: 'center', borderRadius: p * 2 },
+            searchBar: { backgroundColor: '#FFFFFF', width: (w - (p * 2)) * 0.100 * 6, height:w*0.098, resizeMode: 'contain', alignItems: 'center', borderRadius: p * 2 },
             textSearch: { backgroundColor: '#E6E6E6' },
             iconBar: { flexDirection: 'row' }
         });

@@ -26,7 +26,7 @@ export class GroupSearchBar extends SGBaseContainer {
             icon: { width: w * 0.095, height: w * 0.095,backgroundColor: 'transparent', resizeMode: 'contain' },
             leftContainer: { flexDirection: 'row', justifyContent: 'flex-start' },
             rightContainer: { flexDirection: 'row', justifyContent: 'flex-end' },
-            searchBar: { backgroundColor: '#FFFFFF', width: (w - (p * 2)) * 0.100 * 5,  height: w*0.085, resizeMode: 'contain', alignItems: 'center', borderRadius: p * 2 }
+            searchBar: { backgroundColor: '#FFFFFF', width: (w - (p * 2)) * 0.100 * 5,  height:w*0.098, resizeMode: 'contain', alignItems: 'center', borderRadius: p * 2 }
         });
     }
 

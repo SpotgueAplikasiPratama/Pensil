@@ -22,7 +22,7 @@ export class SimpleSearchBar extends SGBaseContainer {
             leftContainer: { flexDirection: 'row' },
             rightContainer: { flexDirection: 'row', marginRight: 0 },
             backBtn: {width: w * 0.072, height: w * 0.072, marginLeft: p * 6, backgroundColor: 'transparent', resizeMode: 'contain' },
-            searchKeyword: { width: w * 0.6,height:w*0.085 },
+            searchKeyword: { width: w * 0.6,height:w*0.098 },
             inboxBtn: { width: w * 0.095, height: w * 0.095, marginLeft: p * 4, backgroundColor: 'transparent', resizeMode: 'contain' },
             icon: { width: w * 0.095, height: w * 0.095, backgroundColor: 'transparent', resizeMode: 'contain' },
            

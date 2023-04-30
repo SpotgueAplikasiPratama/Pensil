@@ -18,7 +18,7 @@
              icon: { width: w * 0.095, height: w * 0.095,backgroundColor: 'transparent', resizeMode: 'contain' },
              leftContainer: { flexDirection: 'row', justifyContent: 'flex-start' },
              rightContainer: { flexDirection: 'row', justifyContent: 'flex-end', paddingRight: p*2 },
-             searchBar: { width: w*0.7, height: w*0.085, resizeMode: 'contain', alignItems: 'center', borderRadius: p * 2, borderColor: 'black' }
+             searchBar: { width: w*0.7, height:w*0.098, resizeMode: 'contain', alignItems: 'center', borderRadius: p * 2, borderColor: 'black' }
          });
      }
  
