@@ -8,7 +8,7 @@
 * 3. Execute database operation command
 */
 import React from 'react';
-import { MMKV } from 'react-native-mmkv';
+// import { MMKV } from 'react-native-mmkv';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { dbMode } from '../../../app.json'
 import { SGHelperType } from '.';
